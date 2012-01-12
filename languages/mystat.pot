@@ -1,0 +1,690 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Smyshlaev Evgeniy
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mystat\n"
+"POT-Creation-Date: 2009-05-25 00:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: modules/common.class.php:126
+msgid "January"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "February"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "March"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "April"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "May"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "June"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "July"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "August"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "September"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "October"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "November"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "December"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "Su"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "Mo"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "Tu"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "We"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "Th"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "Fr"
+msgstr ""
+
+#: modules/common.class.php:126
+msgid "Sa"
+msgstr ""
+
+#: modules/common.class.php:127
+msgid "Open Calendar"
+msgstr ""
+
+#: modules/common.class.php:127
+msgid "Close Calendar"
+msgstr ""
+
+#: modules/common.class.php:127
+msgid "Previous Year"
+msgstr ""
+
+#: modules/common.class.php:127
+msgid "Previous Month"
+msgstr ""
+
+#: modules/common.class.php:127
+msgid "Next Month"
+msgstr ""
+
+#: modules/common.class.php:127
+msgid "Next Year"
+msgstr ""
+
+#: modules/main.class.php:21
+#, php-format
+msgid "The report for the period from %s to %s"
+msgstr ""
+
+#: modules/main.class.php:21
+msgid "OK"
+msgstr ""
+
+#: modules/main.class.php:22
+msgid "All"
+msgstr ""
+
+#: modules/main.class.php:22
+msgid "Today"
+msgstr ""
+
+#: modules/main.class.php:22
+msgid "Yesterday"
+msgstr ""
+
+#: modules/main.class.php:22
+msgid "This Week"
+msgstr ""
+
+#: modules/main.class.php:22
+msgid "This Month"
+msgstr ""
+
+#: modules/main.class.php:22
+msgid "Last 7 Days"
+msgstr ""
+
+#: modules/main.class.php:22
+msgid "Last 30 Days"
+msgstr ""
+
+#: modules/main.class.php:36
+msgid "Site Usage/ by summary table"
+msgstr ""
+
+#: modules/main.class.php:95 modules/main.class.php:105
+#: modules/main.class.php:115 modules/main.class.php:139
+msgid "Monday"
+msgstr ""
+
+#: modules/main.class.php:96 modules/main.class.php:106
+#: modules/main.class.php:116 modules/main.class.php:140
+msgid "Tuesday"
+msgstr ""
+
+#: modules/main.class.php:97 modules/main.class.php:107
+#: modules/main.class.php:117 modules/main.class.php:141
+msgid "Wednesday"
+msgstr ""
+
+#: modules/main.class.php:98 modules/main.class.php:108
+#: modules/main.class.php:118 modules/main.class.php:142
+msgid "Thursday"
+msgstr ""
+
+#: modules/main.class.php:99 modules/main.class.php:109
+#: modules/main.class.php:119 modules/main.class.php:143
+msgid "Friday"
+msgstr ""
+
+#: modules/main.class.php:100 modules/main.class.php:110
+#: modules/main.class.php:120 modules/main.class.php:144
+msgid "Saturday"
+msgstr ""
+
+#: modules/main.class.php:101 modules/main.class.php:111
+#: modules/main.class.php:121 modules/main.class.php:145
+msgid "Sunday"
+msgstr ""
+
+#: modules/main.class.php:113 modules/main.class.php:123
+msgid "Average by"
+msgstr ""
+
+#: modules/main.class.php:123
+msgid "7 days"
+msgstr ""
+
+#: modules/main.class.php:124 modules/main.class.php:134 mystat.php:623
+#: mystat.php:651
+msgid "Login Users"
+msgstr ""
+
+#: modules/main.class.php:125 modules/main.class.php:134 mystat.php:622
+#: mystat.php:647
+msgid "Users"
+msgstr ""
+
+#: modules/main.class.php:126 modules/main.class.php:134 mystat.php:621
+#: mystat.php:643
+msgid "Hosts"
+msgstr ""
+
+#: modules/main.class.php:127 modules/main.class.php:134 mystat.php:620
+#: mystat.php:639
+msgid "Pageviews"
+msgstr ""
+
+#: modules/main.class.php:128
+msgid "Pageviews by users"
+msgstr ""
+
+#: modules/main.class.php:134
+msgid "Date"
+msgstr ""
+
+#: modules/main.class.php:165
+msgid "Average"
+msgstr ""
+
+#: modules/main.class.php:172
+msgid "Total"
+msgstr ""
+
+#: modules/main.class.php:185 mystat.php:298
+msgid "Pageviews per Host"
+msgstr ""
+
+#: modules/main.class.php:209 modules/main.class.php:1288
+msgid "1 page"
+msgstr ""
+
+#: modules/main.class.php:210 modules/main.class.php:1289
+msgid "2 pages"
+msgstr ""
+
+#: modules/main.class.php:211 modules/main.class.php:1290
+msgid "3 pages"
+msgstr ""
+
+#: modules/main.class.php:212 modules/main.class.php:1291
+msgid "4 pages"
+msgstr ""
+
+#: modules/main.class.php:213 modules/main.class.php:1292
+msgid "5 pages"
+msgstr ""
+
+#: modules/main.class.php:214 modules/main.class.php:215
+#: modules/main.class.php:216 modules/main.class.php:217
+#: modules/main.class.php:1293 modules/main.class.php:1294
+#: modules/main.class.php:1295 modules/main.class.php:1296
+#, php-format
+msgid "%s to %s pages"
+msgstr ""
+
+#: modules/main.class.php:218 modules/main.class.php:1297
+msgid "more than 100 pages"
+msgstr ""
+
+#: modules/main.class.php:222 modules/main.class.php:1301
+msgid "Average depth"
+msgstr ""
+
+#: modules/main.class.php:229 mystat.php:304
+msgid "Popular Pages"
+msgstr ""
+
+#: modules/main.class.php:254 modules/main.class.php:487
+#: modules/main.class.php:552 modules/main.class.php:608
+#: modules/main.class.php:667 modules/main.class.php:726
+#: modules/main.class.php:785 modules/main.class.php:823
+#: modules/main.class.php:867 modules/main.class.php:951
+#: modules/main.class.php:989 modules/main.class.php:1025
+#: modules/main.class.php:1082 modules/main.class.php:1201
+#: modules/main.class.php:1524
+msgid "Total:"
+msgstr ""
+
+#: modules/main.class.php:256 modules/main.class.php:489
+#: modules/main.class.php:1526
+msgid "Total requests for pages"
+msgstr ""
+
+#: modules/main.class.php:257 modules/main.class.php:490
+#: modules/main.class.php:1527
+msgid "Total unique pages addresses"
+msgstr ""
+
+#: modules/main.class.php:278 mystat.php:305
+msgid "Popular Titles"
+msgstr ""
+
+#: modules/main.class.php:308 modules/main.class.php:605
+#: modules/main.class.php:664 modules/main.class.php:723
+#: modules/main.class.php:782
+msgid "Show 20 most popular addresses"
+msgstr ""
+
+#: modules/main.class.php:335 mystat.php:310
+msgid "Referrers "
+msgstr ""
+
+#: modules/main.class.php:368 modules/main.class.php:545
+msgid "Show 20 most popular target pages, visited from the current one"
+msgstr ""
+
+#: modules/main.class.php:370
+msgid "Direct Jump"
+msgstr ""
+
+#: modules/main.class.php:392 mystat.php:320
+msgid "IP Addresses"
+msgstr ""
+
+#: modules/main.class.php:422
+msgid "IP-address info"
+msgstr ""
+
+#: modules/main.class.php:446 modules/main.class.php:509
+#: modules/main.class.php:580 modules/main.class.php:639
+#: modules/main.class.php:698 modules/main.class.php:757
+msgid "No URL"
+msgstr ""
+
+#: modules/main.class.php:450 mystat.php:307
+msgid "Popular Pages 404"
+msgstr ""
+
+#: modules/main.class.php:480
+msgid "Show 20 pages of your site which refer to this"
+msgstr ""
+
+#: modules/main.class.php:513 mystat.php:317
+msgid "Links to Pages 404"
+msgstr ""
+
+#: modules/main.class.php:554 modules/main.class.php:825
+#: modules/main.class.php:869
+msgid "Total jumps from pages"
+msgstr ""
+
+#: modules/main.class.php:555
+msgid "Total unique referrers"
+msgstr ""
+
+#: modules/main.class.php:584 modules/main.class.php:610 mystat.php:311
+msgid "Jumps from Search Engines"
+msgstr ""
+
+#: modules/main.class.php:612 modules/main.class.php:671
+#: modules/main.class.php:730 modules/main.class.php:789
+msgid "Other links"
+msgstr ""
+
+#: modules/main.class.php:614 modules/main.class.php:673
+#: modules/main.class.php:732 modules/main.class.php:791
+msgid "Direct jump (without a referrer)"
+msgstr ""
+
+#: modules/main.class.php:643 modules/main.class.php:669 mystat.php:312
+msgid "Jumps from Directories"
+msgstr ""
+
+#: modules/main.class.php:702 modules/main.class.php:728 mystat.php:313
+msgid "Jumps from Ratings"
+msgstr ""
+
+#: modules/main.class.php:761 modules/main.class.php:787 mystat.php:314
+msgid "Jumps from Popular Sites"
+msgstr ""
+
+#: modules/main.class.php:798 mystat.php:323
+msgid "Agents"
+msgstr ""
+
+#: modules/main.class.php:826
+msgid "Total unique agents"
+msgstr ""
+
+#: modules/main.class.php:834 mystat.php:324
+msgid "Accept-Languages"
+msgstr ""
+
+#: modules/main.class.php:860 modules/main.class.php:992
+#: modules/main.class.php:1028 modules/main.class.php:1457
+msgid "Unknown"
+msgstr ""
+
+#: modules/main.class.php:870
+msgid "Total unique Accept-Languages"
+msgstr ""
+
+#: modules/main.class.php:878 modules/main.class.php:953 mystat.php:325
+msgid "Browsers"
+msgstr ""
+
+#: modules/main.class.php:936 modules/main.class.php:954
+msgid "Other browsers"
+msgstr ""
+
+#: modules/main.class.php:961 mystat.php:326
+msgid "Screen Resolution"
+msgstr ""
+
+#: modules/main.class.php:978
+msgid "Other resolution"
+msgstr ""
+
+#: modules/main.class.php:1000 mystat.php:327
+msgid "Colour Depth"
+msgstr ""
+
+#: modules/main.class.php:1016
+msgid "256 colors"
+msgstr ""
+
+#: modules/main.class.php:1017
+msgid "65 thousand colors"
+msgstr ""
+
+#: modules/main.class.php:1018 modules/main.class.php:1019
+msgid "16 mln. colors"
+msgstr ""
+
+#: modules/main.class.php:1047
+msgid "16 bit systems"
+msgstr ""
+
+#: modules/main.class.php:1050
+msgid "32 bit systems"
+msgstr ""
+
+#: modules/main.class.php:1053
+msgid "64 bit systems"
+msgstr ""
+
+#: modules/main.class.php:1058 modules/main.class.php:1084 mystat.php:329
+msgid "Operating Systems"
+msgstr ""
+
+#: modules/main.class.php:1079
+msgid "Type of systems"
+msgstr ""
+
+#: modules/main.class.php:1111
+msgid "The first visit"
+msgstr ""
+
+#: modules/main.class.php:1112
+msgid "The last visit"
+msgstr ""
+
+#: modules/main.class.php:1129 modules/main.class.php:1203 mystat.php:330
+msgid "Robots"
+msgstr ""
+
+#: modules/main.class.php:1192
+msgid "About this robot"
+msgstr ""
+
+#: modules/main.class.php:1204
+msgid "Other Robots"
+msgstr ""
+
+#: modules/main.class.php:1211 mystat.php:315
+msgid "Search Phrases"
+msgstr ""
+
+#: modules/main.class.php:1253 modules/main.class.php:1436
+msgid "Page Found"
+msgstr ""
+
+#: modules/main.class.php:1264 mystat.php:299
+msgid "Pageviews per User"
+msgstr ""
+
+#: modules/main.class.php:1308 mystat.php:300
+msgid "Loading Speed"
+msgstr ""
+
+#: modules/main.class.php:1335
+msgid "Less than 1 second"
+msgstr ""
+
+#: modules/main.class.php:1336
+msgid "1-2 seconds"
+msgstr ""
+
+#: modules/main.class.php:1337
+msgid "3-4 seconds"
+msgstr ""
+
+#: modules/main.class.php:1338
+msgid "5-6 seconds"
+msgstr ""
+
+#: modules/main.class.php:1339
+msgid "7-8 seconds"
+msgstr ""
+
+#: modules/main.class.php:1340
+msgid "9-10 seconds"
+msgstr ""
+
+#: modules/main.class.php:1341
+msgid "11-15 seconds"
+msgstr ""
+
+#: modules/main.class.php:1342
+msgid "16-20 seconds"
+msgstr ""
+
+#: modules/main.class.php:1343
+msgid "21-30 seconds"
+msgstr ""
+
+#: modules/main.class.php:1344
+msgid "31-45 seconds"
+msgstr ""
+
+#: modules/main.class.php:1345
+msgid "46-60 seconds"
+msgstr ""
+
+#: modules/main.class.php:1346
+msgid "More than 1 minute"
+msgstr ""
+
+#: modules/main.class.php:1350
+msgid "Average time"
+msgstr ""
+
+#: modules/main.class.php:1357 mystat.php:306
+msgid "Domain Names"
+msgstr ""
+
+#: modules/main.class.php:1387 mystat.php:316
+msgid "Search Phrases by Date"
+msgstr ""
+
+#: modules/main.class.php:1447 mystat.php:328
+msgid "JavaScript"
+msgstr ""
+
+#: modules/main.class.php:1457
+msgid "Version of JavaScript"
+msgstr ""
+
+#: modules/main.class.php:1469 mystat.php:292 mystat.php:333
+msgid "Configuration"
+msgstr ""
+
+#: modules/main.class.php:1471
+msgid "Main settings"
+msgstr ""
+
+#: modules/main.class.php:1472
+msgid ""
+"It sets period of complete statistics storage per days. The longer the "
+"period, the more space is required for the database. The database size "
+"influences the system performance, it slows down with larger database. "
+"Database size can be monitored in the report \"Database size\"."
+msgstr ""
+
+#: modules/main.class.php:1474 modules/main.class.php:1475
+#: modules/main.class.php:1476 modules/main.class.php:1477
+#: modules/main.class.php:1478 modules/main.class.php:1479
+msgid "days"
+msgstr ""
+
+#: modules/main.class.php:1480
+msgid "1 year"
+msgstr ""
+
+#: modules/main.class.php:1481
+msgid "1,5 years"
+msgstr ""
+
+#: modules/main.class.php:1482
+msgid "2 years"
+msgstr ""
+
+#: modules/main.class.php:1485
+msgid "Show unique visitors to post"
+msgstr ""
+
+#: modules/main.class.php:1488
+msgid "Save settings"
+msgstr ""
+
+#: modules/main.class.php:1498 mystat.php:303
+msgid "Popular Posts"
+msgstr ""
+
+#: modules/main.class.php:1517 mystat.php:619
+msgid "Title:"
+msgstr ""
+
+#: modules/main.class.php:1517
+msgid "Publish Date"
+msgstr ""
+
+#: mystat.php:212
+msgid "Overview"
+msgstr ""
+
+#: mystat.php:262
+msgid "Version"
+msgstr ""
+
+#: mystat.php:287
+msgid "Audience"
+msgstr ""
+
+#: mystat.php:288
+msgid "Pages"
+msgstr ""
+
+#: mystat.php:289
+msgid "Referrers"
+msgstr ""
+
+#: mystat.php:290
+msgid "Geography"
+msgstr ""
+
+#: mystat.php:291
+msgid "System"
+msgstr ""
+
+#: mystat.php:297
+msgid "Site Usage"
+msgstr ""
+
+#: mystat.php:554
+msgid "ERROR: Host not found!"
+msgstr ""
+
+#: mystat.php:656 mystat.php:657
+msgid "myStat statistics"
+msgstr ""
+
+#: mystat.php:666
+msgid "myStat statistic for WordPress"
+msgstr ""
+
+#: mystat.php:666
+msgid "Unique visitors to post"
+msgstr ""
+
+#. Plugin Name of an extension
+msgid "mySTAT"
+msgstr ""
+
+#. Plugin URI of an extension
+msgid "http://www.sandbox.net.ua/mystat/"
+msgstr ""
+
+#. Description of an extension
+msgid ""
+"myStat is a flexible and versatile system intended for accumulation and "
+"analysis of the site attendance statistics. myStat suits to upcoming "
+"projects perfectly. There are more than 50 reports available in the system. "
+"The system is easy to install and to set up; it allows counting all the "
+"visitors of your web-site - both humans and robots. All visits data is "
+"stored at your server, which meets safety and confidentiality requirements."
+msgstr ""
+
+#. Author of an extension
+msgid "Smyshlaev Evgeniy"
+msgstr ""
+
+#. Author URI of an extension
+msgid "http://www.hide.com.ua"
+msgstr ""
