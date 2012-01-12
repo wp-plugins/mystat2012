@@ -1,0 +1,826 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: myStat\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-10-13 16:06+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: KILLER <jacksons@bk.ru>\n"
+"Language-Team:  <jacksons@bk.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../mystat.php:259
+msgid "Overview"
+msgstr "Просмотр"
+
+#: ../mystat.php:308
+msgid "Version"
+msgstr "Версия"
+
+#: ../mystat.php:607
+msgid "ERROR: Host not found!"
+msgstr "ОШИБКА: Сайт не найден!"
+
+#: ../mystat.php:654
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: ../mystat.php:655
+#: ../mystat.php:674
+msgid "Pageviews"
+msgstr "Просмотры"
+
+#: ../mystat.php:656
+#: ../mystat.php:678
+msgid "Hosts"
+msgstr "Хостов"
+
+#: ../mystat.php:657
+#: ../mystat.php:682
+msgid "Users"
+msgstr "Пользователей"
+
+#: ../mystat.php:658
+#: ../mystat.php:686
+msgid "Login Users"
+msgstr "Авторизированых"
+
+#: ../mystat.php:691
+#: ../mystat.php:692
+msgid "myStat statistics"
+msgstr "myStat статистика"
+
+#: ../mystat.php:701
+msgid "myStat statistic for WordPress"
+msgstr "myStat статистика для WordPress"
+
+#: ../mystat.php:701
+msgid "Unique visitors to post"
+msgstr "Уникальных посетителей темы"
+
+#: ../modules/common.class.php:129
+msgid "January"
+msgstr "Январь"
+
+#: ../modules/common.class.php:129
+msgid "February"
+msgstr "Февраль"
+
+#: ../modules/common.class.php:129
+msgid "March"
+msgstr "Март"
+
+#: ../modules/common.class.php:129
+msgid "April"
+msgstr "Апрель"
+
+#: ../modules/common.class.php:129
+msgid "May"
+msgstr "Май"
+
+#: ../modules/common.class.php:129
+msgid "June"
+msgstr "Июнь"
+
+#: ../modules/common.class.php:129
+msgid "July"
+msgstr "Июль"
+
+#: ../modules/common.class.php:129
+msgid "August"
+msgstr "Август"
+
+#: ../modules/common.class.php:129
+msgid "September"
+msgstr "Сентябрь"
+
+#: ../modules/common.class.php:129
+msgid "October"
+msgstr "Октябрь"
+
+#: ../modules/common.class.php:129
+msgid "November"
+msgstr "Ноябрь"
+
+#: ../modules/common.class.php:129
+msgid "December"
+msgstr "Декабрь"
+
+#: ../modules/common.class.php:129
+msgid "Su"
+msgstr "Вс"
+
+#: ../modules/common.class.php:129
+msgid "Mo"
+msgstr "Пн"
+
+#: ../modules/common.class.php:129
+msgid "Tu"
+msgstr "Вт"
+
+#: ../modules/common.class.php:129
+msgid "We"
+msgstr "Ср"
+
+#: ../modules/common.class.php:129
+msgid "Th"
+msgstr "Чт"
+
+#: ../modules/common.class.php:129
+msgid "Fr"
+msgstr "Пт"
+
+#: ../modules/common.class.php:129
+msgid "Sa"
+msgstr "Сб"
+
+#: ../modules/common.class.php:130
+msgid "Open Calendar"
+msgstr "Открыть календарь"
+
+#: ../modules/common.class.php:130
+msgid "Close Calendar"
+msgstr "Закрыть календарь"
+
+#: ../modules/common.class.php:130
+msgid "Previous Year"
+msgstr "Предыдущий год"
+
+#: ../modules/common.class.php:130
+msgid "Previous Month"
+msgstr "Предыдущий месяц"
+
+#: ../modules/common.class.php:130
+msgid "Next Month"
+msgstr "Следующий месяц"
+
+#: ../modules/common.class.php:130
+msgid "Next Year"
+msgstr "Следующий год"
+
+#: ../modules/report.class.php:29
+#, php-format
+msgid "The report for the period from %s to %s"
+msgstr "Отчет за период с %s до %s"
+
+#: ../modules/report.class.php:29
+msgid "OK"
+msgstr "ОК"
+
+#: ../modules/report.class.php:30
+msgid "All"
+msgstr "Все"
+
+#: ../modules/report.class.php:30
+msgid "Today"
+msgstr "Сегодня"
+
+#: ../modules/report.class.php:30
+msgid "Yesterday"
+msgstr "Вчера"
+
+#: ../modules/report.class.php:30
+msgid "This Week"
+msgstr "Эта неделя"
+
+#: ../modules/report.class.php:30
+msgid "This Month"
+msgstr "Этот месяц"
+
+#: ../modules/report.class.php:30
+msgid "Last 7 Days"
+msgstr "Последние 7 дней"
+
+#: ../modules/report.class.php:30
+msgid "Last 30 Days"
+msgstr "Последние 30 дней"
+
+#: ../reports/Accept_Languages.class.php:6
+#: ../reports/Accept_Languages.class.php:10
+msgid "Accept-Languages"
+msgstr "Языки ввода"
+
+#: ../reports/Accept_Languages.class.php:14
+#: ../reports/Agents.class.php:14
+#: ../reports/Browsers.class.php:14
+#: ../reports/Colour_Depth.class.php:14
+msgid "System"
+msgstr "Система"
+
+#: ../reports/Accept_Languages.class.php:43
+#: ../reports/Colour_Depth.class.php:36
+#: ../reports/Colour_Depth.class.php:58
+msgid "Unknown"
+msgstr "Не определено"
+
+#: ../reports/Accept_Languages.class.php:50
+#: ../reports/Agents.class.php:42
+#: ../reports/Browsers.class.php:91
+#: ../reports/Colour_Depth.class.php:56
+#: ../reports/Countries.class.php:43
+msgid "Total:"
+msgstr "Всего:"
+
+#: ../reports/Accept_Languages.class.php:52
+#: ../reports/Agents.class.php:44
+msgid "Total jumps from pages"
+msgstr "Всего переходов со страниц"
+
+#: ../reports/Accept_Languages.class.php:53
+msgid "Total unique Accept-Languages"
+msgstr "Всего уникальных языков ввода"
+
+#: ../reports/Agents.class.php:6
+#: ../reports/Agents.class.php:10
+msgid "Agents"
+msgstr "Агенты"
+
+#: ../reports/Agents.class.php:45
+msgid "Total unique agents"
+msgstr "Всего уникальных агентов"
+
+#: ../reports/Browsers.class.php:6
+#: ../reports/Browsers.class.php:10
+#: ../reports/Browsers.class.php:93
+msgid "Browsers"
+msgstr "Браузеры"
+
+#: ../reports/Browsers.class.php:75
+#: ../reports/Browsers.class.php:94
+msgid "Other browsers"
+msgstr "Остальные браузеры"
+
+#: ../reports/Colour_Depth.class.php:6
+#: ../reports/Colour_Depth.class.php:10
+msgid "Colour Depth"
+msgstr "Глубина цвета "
+
+#: ../reports/Colour_Depth.class.php:39
+msgid "Other colour depth"
+msgstr "Прочая глубина цвета "
+
+#: ../reports/Colour_Depth.class.php:47
+msgid "256 colors"
+msgstr "256 цветов"
+
+#: ../reports/Colour_Depth.class.php:48
+msgid "65 thousand colors"
+msgstr "65 тыс. цветов"
+
+#: ../reports/Colour_Depth.class.php:49
+#: ../reports/Colour_Depth.class.php:50
+msgid "16 mln. colors"
+msgstr "16 млн. цветов"
+
+#: ../reports/Configuration.class.php:6
+#: ../reports/Configuration.class.php:10
+#: ../reports/Configuration.class.php:14
+#: ../reports/Configuration.class.php:32
+#: ../reports/Database_Size.class.php:14
+msgid "Configuration"
+msgstr "Конфигурация"
+
+#: ../reports/Configuration.class.php:21
+msgid "Changes dir mode to 0777 for '/data/' dir"
+msgstr "Измените права на 0777 для директории '/data/'"
+
+#: ../reports/Configuration.class.php:34
+msgid "Main settings"
+msgstr "Главные настройки"
+
+#: ../reports/Configuration.class.php:35
+msgid "It sets period of complete statistics storage per days. The longer the period, the more space is required for the database. The database size influences the system performance, it slows down with larger database. Database size can be monitored in the report \"Database size\"."
+msgstr "Определяет период хранения полной статистики за количество дней. Чем больше срок, тем больше пространства для базы данных. Размер базы данных влияет на производительность системы, она замедляется с объёмом базы данных. Размер базы данных можно проверить  в отчете \"Размер базы данных\"."
+
+#: ../reports/Configuration.class.php:37
+#: ../reports/Configuration.class.php:38
+#: ../reports/Configuration.class.php:39
+#: ../reports/Configuration.class.php:40
+#: ../reports/Configuration.class.php:41
+#: ../reports/Configuration.class.php:42
+msgid "days"
+msgstr "дней"
+
+#: ../reports/Configuration.class.php:43
+msgid "1 year"
+msgstr "1 год"
+
+#: ../reports/Configuration.class.php:44
+msgid "1,5 years"
+msgstr "1.5 года"
+
+#: ../reports/Configuration.class.php:45
+msgid "2 years"
+msgstr "2 года"
+
+#: ../reports/Configuration.class.php:48
+msgid "Show unique visitors to post"
+msgstr "Показывать уникальных посетителей темы"
+
+#: ../reports/Configuration.class.php:51
+msgid "Log debug information"
+msgstr "Логировать отладочную информацию"
+
+#: ../reports/Configuration.class.php:54
+msgid "Save settings"
+msgstr "Сохранить"
+
+#: ../reports/Countries.class.php:6
+#: ../reports/Countries.class.php:10
+msgid "Countries"
+msgstr "Страны"
+
+#: ../reports/Countries.class.php:14
+msgid "Geography"
+msgstr "География"
+
+#: ../reports/Countries.class.php:35
+msgid "Not defined"
+msgstr "Не определено"
+
+#: ../reports/Countries.class.php:47
+msgid "Total unique countries"
+msgstr "Всего уникальных стран"
+
+#: ../reports/Database_Size.class.php:6
+#: ../reports/Database_Size.class.php:10
+#: ../reports/Database_Size.class.php:42
+msgid "Database Size"
+msgstr "Размер базы данных"
+
+#: ../reports/Database_Size.class.php:42
+msgid "Date"
+msgstr "Дата"
+
+#: ../reports/Database_Size.class.php:42
+msgid "Changes from the previous day"
+msgstr "Отличие от вчерашнего значения"
+
+#: ../reports/Domain_Names.class.php:6
+#: ../reports/Domain_Names.class.php:10
+msgid "Domain Names"
+msgstr "Доменные имена"
+
+#: ../reports/Domain_Names.class.php:14
+#: ../reports/Popular_Pages.class.php:14
+#: ../reports/Popular_Pages_404.class.php:14
+#: ../reports/Popular_Posts.class.php:14
+#: ../reports/Popular_Titles.class.php:14
+msgid "Pages"
+msgstr "Страницы"
+
+#: ../reports/IP_Addresses.class.php:6
+#: ../reports/IP_Addresses.class.php:10
+msgid "IP Addresses"
+msgstr "IP адреса"
+
+#: ../reports/IP_Addresses.class.php:55
+msgid "IP-address info"
+msgstr "Информация по IP адресу"
+
+#: ../reports/JavaScript.class.php:6
+#: ../reports/JavaScript.class.php:10
+msgid "JavaScript"
+msgstr "ЯваСкрипт"
+
+#: ../reports/JavaScript.class.php:29
+msgid "Version of JavaScript"
+msgstr "Версия JavaScript"
+
+#: ../reports/Jumps_from_Directories.class.php:6
+#: ../reports/Jumps_from_Directories.class.php:10
+#: ../reports/Jumps_from_Directories.class.php:66
+msgid "Jumps from Directories"
+msgstr "Переходы с каталогов"
+
+#: ../reports/Jumps_from_Directories.class.php:14
+#: ../reports/Jumps_from_Popular_Sites.class.php:14
+#: ../reports/Jumps_from_Ratings.class.php:14
+#: ../reports/Jumps_from_Search_Engines.class.php:14
+#: ../reports/Links_to_Pages_404.class.php:14
+msgid "Referrers"
+msgstr "Рефереры"
+
+#: ../reports/Jumps_from_Directories.class.php:35
+#: ../reports/Jumps_from_Popular_Sites.class.php:35
+#: ../reports/Jumps_from_Ratings.class.php:35
+#: ../reports/Jumps_from_Search_Engines.class.php:35
+#: ../reports/Links_to_Pages_404.class.php:29
+#: ../reports/Popular_Pages_404.class.php:29
+msgid "No URL"
+msgstr "Нет URL"
+
+#: ../reports/Jumps_from_Directories.class.php:61
+#: ../reports/Jumps_from_Popular_Sites.class.php:61
+#: ../reports/Jumps_from_Ratings.class.php:61
+#: ../reports/Jumps_from_Search_Engines.class.php:61
+#: ../reports/Popular_Titles.class.php:60
+msgid "Show 20 most popular addresses"
+msgstr "Показать 20 самых популярных адресов"
+
+#: ../reports/Jumps_from_Directories.class.php:68
+#: ../reports/Jumps_from_Popular_Sites.class.php:68
+#: ../reports/Jumps_from_Ratings.class.php:68
+#: ../reports/Jumps_from_Search_Engines.class.php:68
+msgid "Other links"
+msgstr "Остальные ссылки"
+
+#: ../reports/Jumps_from_Directories.class.php:70
+#: ../reports/Jumps_from_Popular_Sites.class.php:70
+#: ../reports/Jumps_from_Ratings.class.php:70
+#: ../reports/Jumps_from_Search_Engines.class.php:70
+msgid "Direct jump (without a referrer)"
+msgstr "Прямой переход (без реферера)"
+
+#: ../reports/Jumps_from_Popular_Sites.class.php:6
+#: ../reports/Jumps_from_Popular_Sites.class.php:10
+#: ../reports/Jumps_from_Popular_Sites.class.php:66
+msgid "Jumps from Popular Sites"
+msgstr "Переходы с популярных сайтов"
+
+#: ../reports/Jumps_from_Ratings.class.php:6
+#: ../reports/Jumps_from_Ratings.class.php:10
+#: ../reports/Jumps_from_Ratings.class.php:66
+msgid "Jumps from Ratings"
+msgstr "Переходы с рейтингов"
+
+#: ../reports/Jumps_from_Search_Engines.class.php:6
+#: ../reports/Jumps_from_Search_Engines.class.php:10
+#: ../reports/Jumps_from_Search_Engines.class.php:66
+msgid "Jumps from Search Engines"
+msgstr "Переходы с поисковых систем"
+
+#: ../reports/Links_to_Pages_404.class.php:6
+#: ../reports/Links_to_Pages_404.class.php:10
+msgid "Links to Pages 404"
+msgstr "Ссылки на страницы 404"
+
+#: ../reports/Links_to_Pages_404.class.php:66
+msgid "Show 20 most popular target pages, visited from the current one"
+msgstr "Показать 20 самых популярных страниц, на которые переходят с этой страницы"
+
+#: ../reports/Links_to_Pages_404.class.php:76
+msgid "Total unique referrers"
+msgstr "Всего уникальных ссылающихся страниц"
+
+#: ../reports/Loading_Speed.class.php:6
+#: ../reports/Loading_Speed.class.php:10
+msgid "Loading Speed"
+msgstr "Скорость загрузки страниц"
+
+#: ../reports/Loading_Speed.class.php:14
+#: ../reports/Pageviews_per_Host.class.php:14
+#: ../reports/Pageviews_per_User.class.php:14
+msgid "Audience"
+msgstr "Аудитория"
+
+#: ../reports/Loading_Speed.class.php:46
+msgid "Less than 1 second"
+msgstr "Менее 1 секунды"
+
+#: ../reports/Loading_Speed.class.php:47
+msgid "1-2 seconds"
+msgstr "1-2 секунды"
+
+#: ../reports/Loading_Speed.class.php:48
+msgid "3-4 seconds"
+msgstr "3-4 секунды"
+
+#: ../reports/Loading_Speed.class.php:49
+msgid "5-6 seconds"
+msgstr "5-6 секунд"
+
+#: ../reports/Loading_Speed.class.php:50
+msgid "7-8 seconds"
+msgstr "7-8 секунд"
+
+#: ../reports/Loading_Speed.class.php:51
+msgid "9-10 seconds"
+msgstr "9-10 секунд"
+
+#: ../reports/Loading_Speed.class.php:52
+msgid "11-15 seconds"
+msgstr "11-15 секунд"
+
+#: ../reports/Loading_Speed.class.php:53
+msgid "16-20 seconds"
+msgstr "16-20 секунд"
+
+#: ../reports/Loading_Speed.class.php:54
+msgid "21-30 seconds"
+msgstr "21-30 секунд"
+
+#: ../reports/Loading_Speed.class.php:55
+msgid "31-45 seconds"
+msgstr "31-45 секунд"
+
+#: ../reports/Loading_Speed.class.php:56
+msgid "46-60 seconds"
+msgstr "46-60 секунд"
+
+#: ../reports/Loading_Speed.class.php:57
+msgid "More than 1 minute"
+msgstr "Более 1 минуты"
+
+#: ../reports/Loading_Speed.class.php:61
+msgid "Average time"
+msgstr "Среднее время загрузки"
+
+#: ../reports/Operating_Systems.class.php:6
+#: ../reports/Operating_Systems.class.php:10
+#: ../reports/Operating_Systems.class.php:66
+msgid "Operating Systems"
+msgstr "Операционные системы"
+
+#: ../reports/Operating_Systems.class.php:28
+msgid "16 bit systems"
+msgstr "16 битные системы"
+
+#: ../reports/Operating_Systems.class.php:31
+msgid "32 bit systems"
+msgstr "32 битные системы"
+
+#: ../reports/Operating_Systems.class.php:34
+msgid "64 bit systems"
+msgstr "64 битные системы"
+
+#: ../reports/Operating_Systems.class.php:61
+msgid "Type of systems"
+msgstr "Тип систем"
+
+#: ../reports/Pageviews_per_Host.class.php:6
+#: ../reports/Pageviews_per_Host.class.php:10
+msgid "Pageviews per Host"
+msgstr "Просмотров на хост"
+
+#: ../reports/Pageviews_per_Host.class.php:43
+#: ../reports/Pageviews_per_User.class.php:43
+msgid "1 page"
+msgstr "1 страница"
+
+#: ../reports/Pageviews_per_Host.class.php:44
+#: ../reports/Pageviews_per_User.class.php:44
+msgid "2 pages"
+msgstr "2 страницы"
+
+#: ../reports/Pageviews_per_Host.class.php:45
+#: ../reports/Pageviews_per_User.class.php:45
+msgid "3 pages"
+msgstr "3 страницы"
+
+#: ../reports/Pageviews_per_Host.class.php:46
+#: ../reports/Pageviews_per_User.class.php:46
+msgid "4 pages"
+msgstr "4 страницы"
+
+#: ../reports/Pageviews_per_Host.class.php:47
+#: ../reports/Pageviews_per_User.class.php:47
+msgid "5 pages"
+msgstr "5 страниц"
+
+#: ../reports/Pageviews_per_Host.class.php:48
+#: ../reports/Pageviews_per_Host.class.php:49
+#: ../reports/Pageviews_per_Host.class.php:50
+#: ../reports/Pageviews_per_Host.class.php:51
+#: ../reports/Pageviews_per_User.class.php:48
+#: ../reports/Pageviews_per_User.class.php:49
+#: ../reports/Pageviews_per_User.class.php:50
+#: ../reports/Pageviews_per_User.class.php:51
+#, php-format
+msgid "%s to %s pages"
+msgstr "от %s до %s страниц"
+
+#: ../reports/Pageviews_per_Host.class.php:52
+#: ../reports/Pageviews_per_User.class.php:52
+msgid "more than 100 pages"
+msgstr "более 100 страниц"
+
+#: ../reports/Pageviews_per_Host.class.php:56
+#: ../reports/Pageviews_per_User.class.php:56
+msgid "Average depth"
+msgstr "Средняя глубина просмотра"
+
+#: ../reports/Pageviews_per_User.class.php:6
+#: ../reports/Pageviews_per_User.class.php:10
+msgid "Pageviews per User"
+msgstr "Просмотров на пользователя"
+
+#: ../reports/Popular_Pages.class.php:6
+#: ../reports/Popular_Pages.class.php:10
+msgid "Popular Pages"
+msgstr "Популярные страницы"
+
+#: ../reports/Popular_Pages.class.php:44
+#: ../reports/Popular_Pages_404.class.php:71
+#: ../reports/Popular_Posts.class.php:45
+msgid "Total requests for pages"
+msgstr "Всего обращений к страницам"
+
+#: ../reports/Popular_Pages.class.php:45
+#: ../reports/Popular_Pages_404.class.php:72
+#: ../reports/Popular_Posts.class.php:46
+msgid "Total unique pages addresses"
+msgstr "Всего уникальных адресов страниц"
+
+#: ../reports/Popular_Pages_404.class.php:6
+#: ../reports/Popular_Pages_404.class.php:10
+msgid "Popular Pages 404"
+msgstr "Популярные страницы 404"
+
+#: ../reports/Popular_Pages_404.class.php:62
+msgid "Show 20 pages of your site which refer to this"
+msgstr "Показать 20 страниц вашего сайта, которые ссылаются на эту"
+
+#: ../reports/Popular_Posts.class.php:6
+#: ../reports/Popular_Posts.class.php:10
+msgid "Popular Posts"
+msgstr "Популярные посты"
+
+#: ../reports/Popular_Posts.class.php:36
+msgid "Publish Date"
+msgstr "Дата публикации"
+
+#: ../reports/Popular_Titles.class.php:6
+#: ../reports/Popular_Titles.class.php:10
+msgid "Popular Titles"
+msgstr "Популярные заголовки"
+
+#: ../reports/Referrers.class.php:64
+msgid "Direct Jump"
+msgstr "Прямой переход"
+
+#: ../reports/Robots.class.php:6
+#: ../reports/Robots.class.php:10
+#: ../reports/Robots.class.php:131
+msgid "Robots"
+msgstr "Роботы"
+
+#: ../reports/Robots.class.php:40
+msgid "The first visit"
+msgstr "Первое посещение"
+
+#: ../reports/Robots.class.php:41
+msgid "The last visit"
+msgstr "Последнее посещение"
+
+#: ../reports/Robots.class.php:120
+msgid "About this robot"
+msgstr "О роботе..."
+
+#: ../reports/Robots.class.php:132
+msgid "Other Robots"
+msgstr "Остальные роботы"
+
+#: ../reports/Screen_Resolution.class.php:6
+#: ../reports/Screen_Resolution.class.php:10
+msgid "Screen Resolution"
+msgstr "Экранное разрешение"
+
+#: ../reports/Screen_Resolution.class.php:36
+msgid "Other resolution"
+msgstr "Другие разрешения"
+
+#: ../reports/Search_Phrases.class.php:6
+#: ../reports/Search_Phrases.class.php:10
+msgid "Search Phrases"
+msgstr "Поисковые фразы"
+
+#: ../reports/Search_Phrases.class.php:59
+#: ../reports/Search_Phrases_by_Date.class.php:66
+msgid "Page Found"
+msgstr "Найденная страница"
+
+#: ../reports/Search_Phrases_by_Date.class.php:6
+#: ../reports/Search_Phrases_by_Date.class.php:10
+msgid "Search Phrases by Date"
+msgstr "Поисковые фразы по дате"
+
+#: ../reports/SEO_by_domain.class.php:6
+#: ../reports/SEO_by_domain.class.php:10
+msgid "SEO by domain"
+msgstr "SEO для домена"
+
+#: ../reports/SEO_by_domain.class.php:14
+msgid "SEO"
+msgstr "SEO"
+
+#: ../reports/SEO_by_domain.class.php:21
+msgid "Choose domain"
+msgstr "Выберите домен"
+
+#: ../reports/SEO_by_domain.class.php:36
+msgid "Google PR"
+msgstr "Google PR"
+
+#: ../reports/SEO_by_domain.class.php:40
+msgid "Yandex CY"
+msgstr "Yandex CY"
+
+#: ../reports/Site_Usage.class.php:6
+msgid "Site Usage/ by summary table"
+msgstr "Посещаемость сайта / по сводной таблице"
+
+#: ../reports/Site_Usage.class.php:10
+msgid "Site Usage"
+msgstr "Посещаемость сайта"
+
+#: ../reports/Site_Usage.class.php:116
+#: ../reports/Site_Usage.class.php:127
+#: ../reports/Site_Usage.class.php:139
+#: ../reports/Site_Usage.class.php:173
+msgid "Monday"
+msgstr "Понедельник"
+
+#: ../reports/Site_Usage.class.php:117
+#: ../reports/Site_Usage.class.php:128
+#: ../reports/Site_Usage.class.php:140
+#: ../reports/Site_Usage.class.php:174
+msgid "Tuesday"
+msgstr "Вторник"
+
+#: ../reports/Site_Usage.class.php:118
+#: ../reports/Site_Usage.class.php:129
+#: ../reports/Site_Usage.class.php:141
+#: ../reports/Site_Usage.class.php:175
+msgid "Wednesday"
+msgstr "Среда"
+
+#: ../reports/Site_Usage.class.php:119
+#: ../reports/Site_Usage.class.php:130
+#: ../reports/Site_Usage.class.php:142
+#: ../reports/Site_Usage.class.php:176
+msgid "Thursday"
+msgstr "Четверг"
+
+#: ../reports/Site_Usage.class.php:120
+#: ../reports/Site_Usage.class.php:131
+#: ../reports/Site_Usage.class.php:143
+#: ../reports/Site_Usage.class.php:177
+msgid "Friday"
+msgstr "Пятница"
+
+#: ../reports/Site_Usage.class.php:121
+#: ../reports/Site_Usage.class.php:132
+#: ../reports/Site_Usage.class.php:144
+#: ../reports/Site_Usage.class.php:178
+msgid "Saturday"
+msgstr "Суббота"
+
+#: ../reports/Site_Usage.class.php:122
+#: ../reports/Site_Usage.class.php:133
+#: ../reports/Site_Usage.class.php:145
+#: ../reports/Site_Usage.class.php:179
+msgid "Sunday"
+msgstr "Воскресенье"
+
+#: ../reports/Site_Usage.class.php:137
+#: ../reports/Site_Usage.class.php:147
+msgid "Average by"
+msgstr "Среднее за"
+
+#: ../reports/Site_Usage.class.php:147
+msgid "7 days"
+msgstr "7 дней"
+
+#: ../reports/Site_Usage.class.php:152
+msgid "Pageviews by users"
+msgstr "Просмотров пользователей"
+
+#: ../reports/Site_Usage.class.php:189
+msgid "Average"
+msgstr "Среднее"
+
+#: ../reports/Site_Usage.class.php:196
+msgid "Total"
+msgstr "Всего"
+
+#~ msgid "Referrers "
+#~ msgstr "Ссылающиеся страницы"
+
+#, fuzzy
+#~ msgid "Title"
+#~ msgstr "Заголовок:"
+#~ msgid "Show 20 most popular link"
+#~ msgstr "Показать 20 самых популярных ссылок"
+
+#, fuzzy
+#~ msgid "Pageviews per Host "
+#~ msgstr "Просмотров на хост"
+#~ msgid "Additional parameters"
+#~ msgstr "Дополнительные параметры"
+#~ msgid "Grouping"
+#~ msgstr "Группировка"
+#~ msgid "By Hours"
+#~ msgstr "По часам"
+#~ msgid "By Weeks"
+#~ msgstr "По неделям"
+#~ msgid "Auditory"
+#~ msgstr "Аудитория"
+
