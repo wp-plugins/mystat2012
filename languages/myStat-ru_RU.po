@@ -1,0 +1,778 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: myStat\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-05-25 03:00+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: KILLER <jacksons@ukr.net>\n"
+"Language-Team:  <jacksons@bk.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: UKRAINE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../mystat.php:212
+msgid "Overview"
+msgstr "Просмотр"
+
+#: ../mystat.php:262
+msgid "Version"
+msgstr "Версия"
+
+#: ../mystat.php:287
+msgid "Audience"
+msgstr "Аудитория"
+
+#: ../mystat.php:288
+msgid "Pages"
+msgstr "Страницы"
+
+#: ../mystat.php:289
+msgid "Referrers"
+msgstr "Рефереры"
+
+#: ../mystat.php:290
+msgid "Geography"
+msgstr "География"
+
+#: ../mystat.php:291
+msgid "System"
+msgstr "Система"
+
+#: ../mystat.php:292
+#: ../mystat.php:333
+#: ../modules/main.class.php:1469
+msgid "Configuration"
+msgstr "Конфигурация"
+
+#: ../mystat.php:297
+msgid "Site Usage"
+msgstr "Посещаемость сайта"
+
+#: ../mystat.php:298
+#: ../modules/main.class.php:185
+msgid "Pageviews per Host"
+msgstr "Просмотров на хост"
+
+#: ../mystat.php:299
+#: ../modules/main.class.php:1264
+msgid "Pageviews per User"
+msgstr "Просмотров на пользователя"
+
+#: ../mystat.php:300
+#: ../modules/main.class.php:1308
+msgid "Loading Speed"
+msgstr "Скорость загрузки страниц"
+
+#: ../mystat.php:303
+#: ../modules/main.class.php:1498
+msgid "Popular Posts"
+msgstr "Популярные посты"
+
+#: ../mystat.php:304
+#: ../modules/main.class.php:229
+msgid "Popular Pages"
+msgstr "Популярные страницы"
+
+#: ../mystat.php:305
+#: ../modules/main.class.php:278
+msgid "Popular Titles"
+msgstr "Популярные заголовки"
+
+#: ../mystat.php:306
+#: ../modules/main.class.php:1357
+msgid "Domain Names"
+msgstr "Доменные имена"
+
+#: ../mystat.php:307
+#: ../modules/main.class.php:450
+msgid "Popular Pages 404"
+msgstr "Популярные страницы 404"
+
+#: ../mystat.php:310
+#: ../modules/main.class.php:335
+msgid "Referrers "
+msgstr "Ссылающиеся страницы"
+
+#: ../mystat.php:311
+#: ../modules/main.class.php:584
+#: ../modules/main.class.php:610
+msgid "Jumps from Search Engines"
+msgstr "Переходы с поисковых систем"
+
+#: ../mystat.php:312
+#: ../modules/main.class.php:643
+#: ../modules/main.class.php:669
+msgid "Jumps from Directories"
+msgstr "Переходы с каталогов"
+
+#: ../mystat.php:313
+#: ../modules/main.class.php:702
+#: ../modules/main.class.php:728
+msgid "Jumps from Ratings"
+msgstr "Переходы с рейтингов"
+
+#: ../mystat.php:314
+#: ../modules/main.class.php:761
+#: ../modules/main.class.php:787
+msgid "Jumps from Popular Sites"
+msgstr "Переходы с популярных сайтов"
+
+#: ../mystat.php:315
+#: ../modules/main.class.php:1211
+msgid "Search Phrases"
+msgstr "Поисковые фразы"
+
+#: ../mystat.php:316
+#: ../modules/main.class.php:1387
+msgid "Search Phrases by Date"
+msgstr "Поисковые фразы по дате"
+
+#: ../mystat.php:317
+#: ../modules/main.class.php:513
+msgid "Links to Pages 404"
+msgstr "Ссылки на страницы 404"
+
+#: ../mystat.php:320
+#: ../modules/main.class.php:392
+msgid "IP Addresses"
+msgstr "IP адреса"
+
+#: ../mystat.php:323
+#: ../modules/main.class.php:798
+msgid "Agents"
+msgstr "Агенты"
+
+#: ../mystat.php:324
+#: ../modules/main.class.php:834
+msgid "Accept-Languages"
+msgstr "Языки ввода"
+
+#: ../mystat.php:325
+#: ../modules/main.class.php:878
+#: ../modules/main.class.php:953
+msgid "Browsers"
+msgstr "Браузеры"
+
+#: ../mystat.php:326
+#: ../modules/main.class.php:961
+msgid "Screen Resolution"
+msgstr "Экранное разрешение"
+
+#: ../mystat.php:327
+#: ../modules/main.class.php:1000
+msgid "Colour Depth"
+msgstr "Глубина цвета "
+
+#: ../mystat.php:328
+#: ../modules/main.class.php:1447
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: ../mystat.php:329
+#: ../modules/main.class.php:1058
+#: ../modules/main.class.php:1084
+msgid "Operating Systems"
+msgstr "Операционные системы"
+
+#: ../mystat.php:330
+#: ../modules/main.class.php:1129
+#: ../modules/main.class.php:1203
+msgid "Robots"
+msgstr "Роботы"
+
+#: ../mystat.php:554
+msgid "ERROR: Host not found!"
+msgstr "ОШИБКА: Сайт не найден!"
+
+#: ../mystat.php:619
+#: ../modules/main.class.php:1517
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: ../mystat.php:620
+#: ../mystat.php:639
+#: ../modules/main.class.php:127
+#: ../modules/main.class.php:134
+msgid "Pageviews"
+msgstr "Просмотры"
+
+#: ../mystat.php:621
+#: ../mystat.php:643
+#: ../modules/main.class.php:126
+#: ../modules/main.class.php:134
+msgid "Hosts"
+msgstr "Хостов"
+
+#: ../mystat.php:622
+#: ../mystat.php:647
+#: ../modules/main.class.php:125
+#: ../modules/main.class.php:134
+msgid "Users"
+msgstr "Пользователей"
+
+#: ../mystat.php:623
+#: ../mystat.php:651
+#: ../modules/main.class.php:124
+#: ../modules/main.class.php:134
+msgid "Login Users"
+msgstr "Авторизированых"
+
+#: ../mystat.php:656
+#: ../mystat.php:657
+msgid "myStat statistics"
+msgstr "myStat статистика"
+
+#: ../mystat.php:666
+msgid "myStat statistic for WordPress"
+msgstr "myStat статистика для WordPress"
+
+#: ../mystat.php:666
+msgid "Unique visitors to post"
+msgstr "Уникальных посетителей темы"
+
+#: ../modules/common.class.php:126
+msgid "January"
+msgstr "Январь"
+
+#: ../modules/common.class.php:126
+msgid "February"
+msgstr "Февраль"
+
+#: ../modules/common.class.php:126
+msgid "March"
+msgstr "Март"
+
+#: ../modules/common.class.php:126
+msgid "April"
+msgstr "Апрель"
+
+#: ../modules/common.class.php:126
+msgid "May"
+msgstr "Май"
+
+#: ../modules/common.class.php:126
+msgid "June"
+msgstr "Июнь"
+
+#: ../modules/common.class.php:126
+msgid "July"
+msgstr "Июль"
+
+#: ../modules/common.class.php:126
+msgid "August"
+msgstr "Август"
+
+#: ../modules/common.class.php:126
+msgid "September"
+msgstr "Сентябрь"
+
+#: ../modules/common.class.php:126
+msgid "October"
+msgstr "Октябрь"
+
+#: ../modules/common.class.php:126
+msgid "November"
+msgstr "Ноябрь"
+
+#: ../modules/common.class.php:126
+msgid "December"
+msgstr "Декабрь"
+
+#: ../modules/common.class.php:126
+msgid "Su"
+msgstr "Вс"
+
+#: ../modules/common.class.php:126
+msgid "Mo"
+msgstr "Пн"
+
+#: ../modules/common.class.php:126
+msgid "Tu"
+msgstr "Вт"
+
+#: ../modules/common.class.php:126
+msgid "We"
+msgstr "Ср"
+
+#: ../modules/common.class.php:126
+msgid "Th"
+msgstr "Чт"
+
+#: ../modules/common.class.php:126
+msgid "Fr"
+msgstr "Пт"
+
+#: ../modules/common.class.php:126
+msgid "Sa"
+msgstr "Сб"
+
+#: ../modules/common.class.php:127
+msgid "Open Calendar"
+msgstr "Открыть календарь"
+
+#: ../modules/common.class.php:127
+msgid "Close Calendar"
+msgstr "Закрыть календарь"
+
+#: ../modules/common.class.php:127
+msgid "Previous Year"
+msgstr "Предыдущий год"
+
+#: ../modules/common.class.php:127
+msgid "Previous Month"
+msgstr "Предыдущий месяц"
+
+#: ../modules/common.class.php:127
+msgid "Next Month"
+msgstr "Следующий месяц"
+
+#: ../modules/common.class.php:127
+msgid "Next Year"
+msgstr "Следующий год"
+
+#: ../modules/main.class.php:21
+#, php-format
+msgid "The report for the period from %s to %s"
+msgstr "Отчет за период с %s до %s"
+
+#: ../modules/main.class.php:21
+msgid "OK"
+msgstr "ОК"
+
+#: ../modules/main.class.php:22
+msgid "All"
+msgstr "Все"
+
+#: ../modules/main.class.php:22
+msgid "Today"
+msgstr "Сегодня"
+
+#: ../modules/main.class.php:22
+msgid "Yesterday"
+msgstr "Вчера"
+
+#: ../modules/main.class.php:22
+msgid "This Week"
+msgstr "Эта неделя"
+
+#: ../modules/main.class.php:22
+msgid "This Month"
+msgstr "Этот месяц"
+
+#: ../modules/main.class.php:22
+msgid "Last 7 Days"
+msgstr "Последние 7 дней"
+
+#: ../modules/main.class.php:22
+msgid "Last 30 Days"
+msgstr "Последние 30 дней"
+
+#: ../modules/main.class.php:36
+msgid "Site Usage/ by summary table"
+msgstr "Посещаемость сайта / по сводной таблице"
+
+#: ../modules/main.class.php:95
+#: ../modules/main.class.php:105
+#: ../modules/main.class.php:115
+#: ../modules/main.class.php:139
+msgid "Monday"
+msgstr "Понедельник"
+
+#: ../modules/main.class.php:96
+#: ../modules/main.class.php:106
+#: ../modules/main.class.php:116
+#: ../modules/main.class.php:140
+msgid "Tuesday"
+msgstr "Вторник"
+
+#: ../modules/main.class.php:97
+#: ../modules/main.class.php:107
+#: ../modules/main.class.php:117
+#: ../modules/main.class.php:141
+msgid "Wednesday"
+msgstr "Среда"
+
+#: ../modules/main.class.php:98
+#: ../modules/main.class.php:108
+#: ../modules/main.class.php:118
+#: ../modules/main.class.php:142
+msgid "Thursday"
+msgstr "Четверг"
+
+#: ../modules/main.class.php:99
+#: ../modules/main.class.php:109
+#: ../modules/main.class.php:119
+#: ../modules/main.class.php:143
+msgid "Friday"
+msgstr "Пятница"
+
+#: ../modules/main.class.php:100
+#: ../modules/main.class.php:110
+#: ../modules/main.class.php:120
+#: ../modules/main.class.php:144
+msgid "Saturday"
+msgstr "Суббота"
+
+#: ../modules/main.class.php:101
+#: ../modules/main.class.php:111
+#: ../modules/main.class.php:121
+#: ../modules/main.class.php:145
+msgid "Sunday"
+msgstr "Воскресенье"
+
+#: ../modules/main.class.php:113
+#: ../modules/main.class.php:123
+msgid "Average by"
+msgstr "Среднее за"
+
+#: ../modules/main.class.php:123
+msgid "7 days"
+msgstr "7 дней"
+
+#: ../modules/main.class.php:128
+msgid "Pageviews by users"
+msgstr "Просмотров пользователей"
+
+#: ../modules/main.class.php:134
+msgid "Date"
+msgstr "Дата"
+
+#: ../modules/main.class.php:165
+msgid "Average"
+msgstr "Среднее"
+
+#: ../modules/main.class.php:172
+msgid "Total"
+msgstr "Всего"
+
+#: ../modules/main.class.php:209
+#: ../modules/main.class.php:1288
+msgid "1 page"
+msgstr "1 страница"
+
+#: ../modules/main.class.php:210
+#: ../modules/main.class.php:1289
+msgid "2 pages"
+msgstr "2 страницы"
+
+#: ../modules/main.class.php:211
+#: ../modules/main.class.php:1290
+msgid "3 pages"
+msgstr "3 страницы"
+
+#: ../modules/main.class.php:212
+#: ../modules/main.class.php:1291
+msgid "4 pages"
+msgstr "4 страницы"
+
+#: ../modules/main.class.php:213
+#: ../modules/main.class.php:1292
+msgid "5 pages"
+msgstr "5 страниц"
+
+#: ../modules/main.class.php:214
+#: ../modules/main.class.php:215
+#: ../modules/main.class.php:216
+#: ../modules/main.class.php:217
+#: ../modules/main.class.php:1293
+#: ../modules/main.class.php:1294
+#: ../modules/main.class.php:1295
+#: ../modules/main.class.php:1296
+#, php-format
+msgid "%s to %s pages"
+msgstr "от %s до %s страниц"
+
+#: ../modules/main.class.php:218
+#: ../modules/main.class.php:1297
+msgid "more than 100 pages"
+msgstr "более 100 страниц"
+
+#: ../modules/main.class.php:222
+#: ../modules/main.class.php:1301
+msgid "Average depth"
+msgstr "Средняя глубина просмотра"
+
+#: ../modules/main.class.php:254
+#: ../modules/main.class.php:487
+#: ../modules/main.class.php:552
+#: ../modules/main.class.php:608
+#: ../modules/main.class.php:667
+#: ../modules/main.class.php:726
+#: ../modules/main.class.php:785
+#: ../modules/main.class.php:823
+#: ../modules/main.class.php:867
+#: ../modules/main.class.php:951
+#: ../modules/main.class.php:989
+#: ../modules/main.class.php:1025
+#: ../modules/main.class.php:1082
+#: ../modules/main.class.php:1201
+#: ../modules/main.class.php:1524
+msgid "Total:"
+msgstr "Всего:"
+
+#: ../modules/main.class.php:256
+#: ../modules/main.class.php:489
+#: ../modules/main.class.php:1526
+msgid "Total requests for pages"
+msgstr "Всего обращений к страницам"
+
+#: ../modules/main.class.php:257
+#: ../modules/main.class.php:490
+#: ../modules/main.class.php:1527
+msgid "Total unique pages addresses"
+msgstr "Всего уникальных адресов страниц"
+
+#: ../modules/main.class.php:308
+#: ../modules/main.class.php:605
+#: ../modules/main.class.php:664
+#: ../modules/main.class.php:723
+#: ../modules/main.class.php:782
+msgid "Show 20 most popular addresses"
+msgstr "Показать 20 самых популярных адресов"
+
+#: ../modules/main.class.php:368
+#: ../modules/main.class.php:545
+msgid "Show 20 most popular target pages, visited from the current one"
+msgstr "Показать 20 самых популярных страниц, на которые переходят с этой страницы"
+
+#: ../modules/main.class.php:370
+msgid "Direct Jump"
+msgstr "Прямой переход"
+
+#: ../modules/main.class.php:422
+msgid "IP-address info"
+msgstr "Информация по IP адресу"
+
+#: ../modules/main.class.php:446
+#: ../modules/main.class.php:509
+#: ../modules/main.class.php:580
+#: ../modules/main.class.php:639
+#: ../modules/main.class.php:698
+#: ../modules/main.class.php:757
+msgid "No URL"
+msgstr "Нет URL"
+
+#: ../modules/main.class.php:480
+msgid "Show 20 pages of your site which refer to this"
+msgstr "Показать 20 страниц вашего сайта, которые ссылаются на эту"
+
+#: ../modules/main.class.php:554
+#: ../modules/main.class.php:825
+#: ../modules/main.class.php:869
+msgid "Total jumps from pages"
+msgstr "Всего переходов со страниц"
+
+#: ../modules/main.class.php:555
+msgid "Total unique referrers"
+msgstr "Всего уникальных ссылающихся страниц"
+
+#: ../modules/main.class.php:612
+#: ../modules/main.class.php:671
+#: ../modules/main.class.php:730
+#: ../modules/main.class.php:789
+msgid "Other links"
+msgstr "Остальные ссылки"
+
+#: ../modules/main.class.php:614
+#: ../modules/main.class.php:673
+#: ../modules/main.class.php:732
+#: ../modules/main.class.php:791
+msgid "Direct jump (without a referrer)"
+msgstr "Прямой переход (без реферера)"
+
+#: ../modules/main.class.php:826
+msgid "Total unique agents"
+msgstr "Всего уникальных агентов"
+
+#: ../modules/main.class.php:860
+#: ../modules/main.class.php:992
+#: ../modules/main.class.php:1028
+#: ../modules/main.class.php:1457
+msgid "Unknown"
+msgstr "Не определено"
+
+#: ../modules/main.class.php:870
+msgid "Total unique Accept-Languages"
+msgstr "Всего уникальных языков ввода"
+
+#: ../modules/main.class.php:954
+msgid "Other browsers"
+msgstr "Остальные браузеры"
+
+#: ../modules/main.class.php:978
+msgid "Other resolution"
+msgstr "Другие разрешения"
+
+#: ../modules/main.class.php:1016
+msgid "256 colors"
+msgstr "256 цветов"
+
+#: ../modules/main.class.php:1017
+msgid "65 thousand colors"
+msgstr "65 тыс. цветов"
+
+#: ../modules/main.class.php:1018
+#: ../modules/main.class.php:1019
+msgid "16 mln. colors"
+msgstr "16 млн. цветов"
+
+#: ../modules/main.class.php:1047
+msgid "16 bit systems"
+msgstr "16 битные системы"
+
+#: ../modules/main.class.php:1050
+msgid "32 bit systems"
+msgstr "32 битные системы"
+
+#: ../modules/main.class.php:1053
+msgid "64 bit systems"
+msgstr "64 битные системы"
+
+#: ../modules/main.class.php:1079
+msgid "Type of systems"
+msgstr "Тип систем"
+
+#: ../modules/main.class.php:1111
+msgid "The first visit"
+msgstr "Первое посещение"
+
+#: ../modules/main.class.php:1112
+msgid "The last visit"
+msgstr "Последнее посещение"
+
+#: ../modules/main.class.php:1192
+msgid "About this robot"
+msgstr "О роботе..."
+
+#: ../modules/main.class.php:1204
+msgid "Other Robots"
+msgstr "Остальные роботы"
+
+#: ../modules/main.class.php:1253
+#: ../modules/main.class.php:1436
+msgid "Page Found"
+msgstr "Найденная страница"
+
+#: ../modules/main.class.php:1335
+msgid "Less than 1 second"
+msgstr "Менее 1 секунды"
+
+#: ../modules/main.class.php:1336
+msgid "1-2 seconds"
+msgstr "1-2 секунды"
+
+#: ../modules/main.class.php:1337
+msgid "3-4 seconds"
+msgstr "3-4 секунды"
+
+#: ../modules/main.class.php:1338
+msgid "5-6 seconds"
+msgstr "5-6 секунд"
+
+#: ../modules/main.class.php:1339
+msgid "7-8 seconds"
+msgstr "7-8 секунд"
+
+#: ../modules/main.class.php:1340
+msgid "9-10 seconds"
+msgstr "9-10 секунд"
+
+#: ../modules/main.class.php:1341
+msgid "11-15 seconds"
+msgstr "11-15 секунд"
+
+#: ../modules/main.class.php:1342
+msgid "16-20 seconds"
+msgstr "16-20 секунд"
+
+#: ../modules/main.class.php:1343
+msgid "21-30 seconds"
+msgstr "21-30 секунд"
+
+#: ../modules/main.class.php:1344
+msgid "31-45 seconds"
+msgstr "31-45 секунд"
+
+#: ../modules/main.class.php:1345
+msgid "46-60 seconds"
+msgstr "46-60 секунд"
+
+#: ../modules/main.class.php:1346
+msgid "More than 1 minute"
+msgstr "Более 1 минуты"
+
+#: ../modules/main.class.php:1350
+msgid "Average time"
+msgstr "Среднее время загрузки"
+
+#: ../modules/main.class.php:1457
+msgid "Version of JavaScript"
+msgstr "Версия JavaScript"
+
+#: ../modules/main.class.php:1471
+msgid "Main settings"
+msgstr "Главные настройки"
+
+#: ../modules/main.class.php:1472
+msgid "It sets period of complete statistics storage per days. The longer the period, the more space is required for the database. The database size influences the system performance, it slows down with larger database. Database size can be monitored in the report \"Database size\"."
+msgstr "Определяет период хранения полной статистики за количество дней. Чем больше срок, тем больше пространства для базы данных. Размер базы данных влияет на производительность системы, она замедляется с объёмом базы данных. Размер базы данных можно проверить  в отчете \"Размер базы данных\"."
+
+#: ../modules/main.class.php:1474
+#: ../modules/main.class.php:1475
+#: ../modules/main.class.php:1476
+#: ../modules/main.class.php:1477
+#: ../modules/main.class.php:1478
+#: ../modules/main.class.php:1479
+msgid "days"
+msgstr "дней"
+
+#: ../modules/main.class.php:1480
+msgid "1 year"
+msgstr "1 год"
+
+#: ../modules/main.class.php:1481
+msgid "1,5 years"
+msgstr "1.5 года"
+
+#: ../modules/main.class.php:1482
+msgid "2 years"
+msgstr "2 года"
+
+#: ../modules/main.class.php:1485
+msgid "Show unique visitors to post"
+msgstr "Показывать уникальных посетителей темы"
+
+#: ../modules/main.class.php:1488
+msgid "Save settings"
+msgstr "Сохранить"
+
+#: ../modules/main.class.php:1517
+msgid "Publish Date"
+msgstr "Дата публикации"
+
+#, fuzzy
+#~ msgid "Title"
+#~ msgstr "Заголовок:"
+#~ msgid "Show 20 most popular link"
+#~ msgstr "Показать 20 самых популярных ссылок"
+
+#, fuzzy
+#~ msgid "Pageviews per Host "
+#~ msgstr "Просмотров на хост"
+#~ msgid "Additional parameters"
+#~ msgstr "Дополнительные параметры"
+#~ msgid "Grouping"
+#~ msgstr "Группировка"
+#~ msgid "By Hours"
+#~ msgstr "По часам"
+#~ msgid "By Weeks"
+#~ msgstr "По неделям"
+#~ msgid "Auditory"
+#~ msgstr "Аудитория"
+
