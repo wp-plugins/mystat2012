@@ -1,0 +1,777 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: myStat\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-07-29 04:43+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: KILLER <killer@sandbox.net.ua>\n"
+"Language-Team:  <jacksons@bk.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../mystat.php:211
+msgid "Overview"
+msgstr "Übersicht"
+
+#: ../mystat.php:261
+msgid "Version"
+msgstr "Version"
+
+#: ../mystat.php:546
+msgid "ERROR: Host not found!"
+msgstr "FEHLER: Nicht gefundener Host!"
+
+#: ../mystat.php:591
+msgid "Title:"
+msgstr "Titel:"
+
+#: ../mystat.php:592
+#: ../mystat.php:611
+msgid "Pageviews"
+msgstr "Seitenansichten"
+
+#: ../mystat.php:593
+#: ../mystat.php:615
+msgid "Hosts"
+msgstr "Hosts"
+
+#: ../mystat.php:594
+#: ../mystat.php:619
+msgid "Users"
+msgstr "Benutzer"
+
+#: ../mystat.php:595
+#: ../mystat.php:623
+msgid "Login Users"
+msgstr "Anmeldungsbenutzer"
+
+#: ../mystat.php:628
+#: ../mystat.php:629
+msgid "myStat statistics"
+msgstr "myStat statistik"
+
+#: ../mystat.php:638
+msgid "myStat statistic for WordPress"
+msgstr "myStat statistik für WordPress"
+
+#: ../mystat.php:638
+msgid "Unique visitors to post"
+msgstr "Besucher zum post"
+
+#: ../modules/common.class.php:126
+msgid "January"
+msgstr "Januar"
+
+#: ../modules/common.class.php:126
+msgid "February"
+msgstr "Februar"
+
+#: ../modules/common.class.php:126
+msgid "March"
+msgstr "März"
+
+#: ../modules/common.class.php:126
+msgid "April"
+msgstr "April"
+
+#: ../modules/common.class.php:126
+msgid "May"
+msgstr "Mai"
+
+#: ../modules/common.class.php:126
+msgid "June"
+msgstr "Juni"
+
+#: ../modules/common.class.php:126
+msgid "July"
+msgstr "Juli"
+
+#: ../modules/common.class.php:126
+msgid "August"
+msgstr "August"
+
+#: ../modules/common.class.php:126
+msgid "September"
+msgstr "September"
+
+#: ../modules/common.class.php:126
+msgid "October"
+msgstr "Oktober"
+
+#: ../modules/common.class.php:126
+msgid "November"
+msgstr "\tNovember"
+
+#: ../modules/common.class.php:126
+msgid "December"
+msgstr "Dezember"
+
+#: ../modules/common.class.php:126
+msgid "Su"
+msgstr "So"
+
+#: ../modules/common.class.php:126
+msgid "Mo"
+msgstr "Mo"
+
+#: ../modules/common.class.php:126
+msgid "Tu"
+msgstr "Di"
+
+#: ../modules/common.class.php:126
+msgid "We"
+msgstr "Wir"
+
+#: ../modules/common.class.php:126
+msgid "Th"
+msgstr "Do"
+
+#: ../modules/common.class.php:126
+msgid "Fr"
+msgstr "Fr"
+
+#: ../modules/common.class.php:126
+msgid "Sa"
+msgstr "Sa"
+
+#: ../modules/common.class.php:127
+msgid "Open Calendar"
+msgstr "Open-Kalender"
+
+#: ../modules/common.class.php:127
+msgid "Close Calendar"
+msgstr "Kalender schließen"
+
+#: ../modules/common.class.php:127
+msgid "Previous Year"
+msgstr "Vorjahr"
+
+#: ../modules/common.class.php:127
+msgid "Previous Month"
+msgstr "Vorhergehender Monat"
+
+#: ../modules/common.class.php:127
+msgid "Next Month"
+msgstr "Nächsten Monat"
+
+#: ../modules/common.class.php:127
+msgid "Next Year"
+msgstr "Nächstes Jahr"
+
+#: ../modules/report.class.php:28
+#, php-format
+msgid "The report for the period from %s to %s"
+msgstr "Report für den Zeitraum von %s bis %s"
+
+#: ../modules/report.class.php:28
+msgid "OK"
+msgstr "OK"
+
+#: ../modules/report.class.php:29
+msgid "All"
+msgstr "Alle"
+
+#: ../modules/report.class.php:29
+msgid "Today"
+msgstr "Heute"
+
+#: ../modules/report.class.php:29
+msgid "Yesterday"
+msgstr "Gestern"
+
+#: ../modules/report.class.php:29
+msgid "This Week"
+msgstr "Diese Woche"
+
+#: ../modules/report.class.php:29
+msgid "This Month"
+msgstr "Diesem Monat"
+
+#: ../modules/report.class.php:29
+msgid "Last 7 Days"
+msgstr "Letzte 7 Tage"
+
+#: ../modules/report.class.php:29
+msgid "Last 30 Days"
+msgstr "Letzte 30 Tage"
+
+#: ../reports/Accept_Languages.class.php:6
+#: ../reports/Accept_Languages.class.php:10
+msgid "Accept-Languages"
+msgstr "Browsersprache"
+
+#: ../reports/Accept_Languages.class.php:14
+#: ../reports/Agents.class.php:14
+#: ../reports/Browsers.class.php:14
+#: ../reports/Colour_Depth.class.php:14
+msgid "System"
+msgstr "System"
+
+#: ../reports/Accept_Languages.class.php:43
+#: ../reports/Colour_Depth.class.php:36
+#: ../reports/Colour_Depth.class.php:58
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: ../reports/Accept_Languages.class.php:50
+#: ../reports/Agents.class.php:42
+#: ../reports/Browsers.class.php:91
+#: ../reports/Colour_Depth.class.php:56
+#: ../reports/Countries.class.php:43
+msgid "Total:"
+msgstr "Gesamt:"
+
+#: ../reports/Accept_Languages.class.php:52
+#: ../reports/Agents.class.php:44
+msgid "Total jumps from pages"
+msgstr "Der insgesamt Übergänge von der Seiten"
+
+#: ../reports/Accept_Languages.class.php:53
+msgid "Total unique Accept-Languages"
+msgstr "Der insgesamt einzigartigen browsersprache"
+
+#: ../reports/Agents.class.php:6
+#: ../reports/Agents.class.php:10
+msgid "Agents"
+msgstr "Browseridentifikation"
+
+#: ../reports/Agents.class.php:45
+msgid "Total unique agents"
+msgstr "Der insgesamt einzigartigen browseridentifikation"
+
+#: ../reports/Browsers.class.php:6
+#: ../reports/Browsers.class.php:10
+#: ../reports/Browsers.class.php:93
+msgid "Browsers"
+msgstr "Browser"
+
+#: ../reports/Browsers.class.php:75
+#: ../reports/Browsers.class.php:94
+msgid "Other browsers"
+msgstr "Andere browser"
+
+#: ../reports/Colour_Depth.class.php:6
+#: ../reports/Colour_Depth.class.php:10
+msgid "Colour Depth"
+msgstr "Farbtiefe"
+
+#: ../reports/Colour_Depth.class.php:39
+msgid "Other colour depth"
+msgstr "Andere Farbtiefe"
+
+#: ../reports/Colour_Depth.class.php:47
+msgid "256 colors"
+msgstr "256 Farben"
+
+#: ../reports/Colour_Depth.class.php:48
+msgid "65 thousand colors"
+msgstr "65000 Farben"
+
+#: ../reports/Colour_Depth.class.php:49
+#: ../reports/Colour_Depth.class.php:50
+msgid "16 mln. colors"
+msgstr "16 Mio. Farben"
+
+#: ../reports/Configuration.class.php:6
+#: ../reports/Configuration.class.php:10
+#: ../reports/Configuration.class.php:14
+#: ../reports/Configuration.class.php:22
+#: ../reports/Database_Size.class.php:14
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#: ../reports/Configuration.class.php:24
+msgid "Main settings"
+msgstr "Main-Einstellungen"
+
+#: ../reports/Configuration.class.php:25
+msgid "It sets period of complete statistics storage per days. The longer the period, the more space is required for the database. The database size influences the system performance, it slows down with larger database. Database size can be monitored in the report \"Database size\"."
+msgstr "Es wird Zeit der vollständigen Statistiken Lagerung pro Tag. Je länger der Zeitraum, desto mehr Platz benötigt wird, für die Datenbank. Die Datenbankgröße beeinflusst die System-Performance, es verlangsamt sich mit größeren Datenbank. Datenbankgröße können, die im Rahmen des Berichts \"Datenbankgröße \"."
+
+#: ../reports/Configuration.class.php:27
+#: ../reports/Configuration.class.php:28
+#: ../reports/Configuration.class.php:29
+#: ../reports/Configuration.class.php:30
+#: ../reports/Configuration.class.php:31
+#: ../reports/Configuration.class.php:32
+msgid "days"
+msgstr "Tage"
+
+#: ../reports/Configuration.class.php:33
+msgid "1 year"
+msgstr "1 Jahr"
+
+#: ../reports/Configuration.class.php:34
+msgid "1,5 years"
+msgstr "1.5 Jahr"
+
+#: ../reports/Configuration.class.php:35
+msgid "2 years"
+msgstr "2 Jahr"
+
+#: ../reports/Configuration.class.php:38
+msgid "Show unique visitors to post"
+msgstr "Show besucher zum post"
+
+#: ../reports/Configuration.class.php:41
+msgid "Save settings"
+msgstr "Einstellungen speichern"
+
+#: ../reports/Countries.class.php:6
+#: ../reports/Countries.class.php:10
+msgid "Countries"
+msgstr "Länder"
+
+#: ../reports/Countries.class.php:14
+msgid "Geography"
+msgstr "Geografische Verteilung"
+
+#: ../reports/Countries.class.php:35
+msgid "Not defined"
+msgstr "Unbekannt"
+
+#: ../reports/Countries.class.php:47
+msgid "Total unique countries"
+msgstr "Total einmalige Ländern"
+
+#: ../reports/Database_Size.class.php:6
+#: ../reports/Database_Size.class.php:10
+#: ../reports/Database_Size.class.php:42
+msgid "Database Size"
+msgstr "Datenbankgröße"
+
+#: ../reports/Database_Size.class.php:42
+msgid "Date"
+msgstr "Datum"
+
+#: ../reports/Database_Size.class.php:42
+msgid "Changes from the previous day"
+msgstr "Veränderungen gegenüber gestern"
+
+#: ../reports/Domain_Names.class.php:6
+#: ../reports/Domain_Names.class.php:10
+msgid "Domain Names"
+msgstr "Domainnamen"
+
+#: ../reports/Domain_Names.class.php:14
+#: ../reports/Popular_Pages.class.php:14
+#: ../reports/Popular_Pages_404.class.php:14
+#: ../reports/Popular_Posts.class.php:14
+#: ../reports/Popular_Titles.class.php:14
+msgid "Pages"
+msgstr "Seiten"
+
+#: ../reports/IP_Addresses.class.php:6
+#: ../reports/IP_Addresses.class.php:10
+msgid "IP Addresses"
+msgstr "IP-Adressen"
+
+#: ../reports/IP_Addresses.class.php:56
+msgid "IP-address info"
+msgstr "Informationen zur IP-Adresse"
+
+#: ../reports/JavaScript.class.php:6
+#: ../reports/JavaScript.class.php:10
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: ../reports/JavaScript.class.php:27
+msgid "Version of JavaScript"
+msgstr "\tVersion von JavaScript"
+
+#: ../reports/Jumps_from_Directories.class.php:6
+#: ../reports/Jumps_from_Directories.class.php:10
+#: ../reports/Jumps_from_Directories.class.php:65
+msgid "Jumps from Directories"
+msgstr "Aufrufe von Webverzeichnissen"
+
+#: ../reports/Jumps_from_Directories.class.php:14
+#: ../reports/Jumps_from_Popular_Sites.class.php:14
+#: ../reports/Jumps_from_Ratings.class.php:14
+#: ../reports/Jumps_from_Search_Engines.class.php:14
+#: ../reports/Links_to_Pages_404.class.php:14
+msgid "Referrers"
+msgstr "Verweise"
+
+#: ../reports/Jumps_from_Directories.class.php:35
+#: ../reports/Jumps_from_Popular_Sites.class.php:35
+#: ../reports/Jumps_from_Ratings.class.php:35
+#: ../reports/Jumps_from_Search_Engines.class.php:35
+#: ../reports/Links_to_Pages_404.class.php:29
+#: ../reports/Popular_Pages_404.class.php:29
+msgid "No URL"
+msgstr "Keine URL-ADRESSE"
+
+#: ../reports/Jumps_from_Directories.class.php:60
+#: ../reports/Jumps_from_Popular_Sites.class.php:60
+#: ../reports/Jumps_from_Ratings.class.php:60
+#: ../reports/Jumps_from_Search_Engines.class.php:60
+#: ../reports/Popular_Titles.class.php:61
+msgid "Show 20 most popular addresses"
+msgstr "Zeige die 20 beliebtesten Titel"
+
+#: ../reports/Jumps_from_Directories.class.php:67
+#: ../reports/Jumps_from_Popular_Sites.class.php:67
+#: ../reports/Jumps_from_Ratings.class.php:67
+#: ../reports/Jumps_from_Search_Engines.class.php:67
+msgid "Other links"
+msgstr "Andere Links"
+
+#: ../reports/Jumps_from_Directories.class.php:69
+#: ../reports/Jumps_from_Popular_Sites.class.php:69
+#: ../reports/Jumps_from_Ratings.class.php:69
+#: ../reports/Jumps_from_Search_Engines.class.php:69
+msgid "Direct jump (without a referrer)"
+msgstr "Direkter aufruf (ohne Verweis)"
+
+#: ../reports/Jumps_from_Popular_Sites.class.php:6
+#: ../reports/Jumps_from_Popular_Sites.class.php:10
+#: ../reports/Jumps_from_Popular_Sites.class.php:65
+msgid "Jumps from Popular Sites"
+msgstr "Aufrufe von beliebten Websites"
+
+#: ../reports/Jumps_from_Ratings.class.php:6
+#: ../reports/Jumps_from_Ratings.class.php:10
+#: ../reports/Jumps_from_Ratings.class.php:65
+msgid "Jumps from Ratings"
+msgstr "Aufrufe von Bewertungssites"
+
+#: ../reports/Jumps_from_Search_Engines.class.php:6
+#: ../reports/Jumps_from_Search_Engines.class.php:10
+#: ../reports/Jumps_from_Search_Engines.class.php:65
+msgid "Jumps from Search Engines"
+msgstr "Aufrufe Suchmaschinen"
+
+#: ../reports/Links_to_Pages_404.class.php:6
+#: ../reports/Links_to_Pages_404.class.php:10
+msgid "Links to Pages 404"
+msgstr "Verbindungen zu Seiten 404"
+
+#: ../reports/Links_to_Pages_404.class.php:65
+msgid "Show 20 most popular target pages, visited from the current one"
+msgstr "Zeige die 20 beliebtesten Seiten, die von dieser Seite aus aufgerufen wurden"
+
+#: ../reports/Links_to_Pages_404.class.php:75
+msgid "Total unique referrers"
+msgstr "Der insgesamt einzigartigen verweisenden Seiten"
+
+#: ../reports/Loading_Speed.class.php:6
+#: ../reports/Loading_Speed.class.php:10
+msgid "Loading Speed"
+msgstr "Lade Geschwindigkeit"
+
+#: ../reports/Loading_Speed.class.php:14
+#: ../reports/Pageviews_per_Host.class.php:14
+#: ../reports/Pageviews_per_User.class.php:14
+msgid "Audience"
+msgstr "Seiten Besucher"
+
+#: ../reports/Loading_Speed.class.php:44
+msgid "Less than 1 second"
+msgstr "Weniger als 1 Sekunde"
+
+#: ../reports/Loading_Speed.class.php:45
+msgid "1-2 seconds"
+msgstr "1-2 Sekunden"
+
+#: ../reports/Loading_Speed.class.php:46
+msgid "3-4 seconds"
+msgstr "3-4 Sekunden"
+
+#: ../reports/Loading_Speed.class.php:47
+msgid "5-6 seconds"
+msgstr "5-6 Sekunden"
+
+#: ../reports/Loading_Speed.class.php:48
+msgid "7-8 seconds"
+msgstr "7-8 Sekunden"
+
+#: ../reports/Loading_Speed.class.php:49
+msgid "9-10 seconds"
+msgstr "9-10 Sekunden"
+
+#: ../reports/Loading_Speed.class.php:50
+msgid "11-15 seconds"
+msgstr "11-15 Sekunden"
+
+#: ../reports/Loading_Speed.class.php:51
+msgid "16-20 seconds"
+msgstr "16-20 Sekunden"
+
+#: ../reports/Loading_Speed.class.php:52
+msgid "21-30 seconds"
+msgstr "21-30 Sekunden"
+
+#: ../reports/Loading_Speed.class.php:53
+msgid "31-45 seconds"
+msgstr "31-45 Sekunden"
+
+#: ../reports/Loading_Speed.class.php:54
+msgid "46-60 seconds"
+msgstr "46-60 Sekunden"
+
+#: ../reports/Loading_Speed.class.php:55
+msgid "More than 1 minute"
+msgstr "Mehr als 1 Minute"
+
+#: ../reports/Loading_Speed.class.php:59
+msgid "Average time"
+msgstr "Durchschnittliche Zeit"
+
+#: ../reports/Operating_Systems.class.php:6
+#: ../reports/Operating_Systems.class.php:10
+#: ../reports/Operating_Systems.class.php:65
+msgid "Operating Systems"
+msgstr "Betriebssysteme"
+
+#: ../reports/Operating_Systems.class.php:28
+msgid "16 bit systems"
+msgstr "16-Bit-Systeme"
+
+#: ../reports/Operating_Systems.class.php:31
+msgid "32 bit systems"
+msgstr "32-Bit-Systeme"
+
+#: ../reports/Operating_Systems.class.php:34
+msgid "64 bit systems"
+msgstr "64-Bit-Systeme"
+
+#: ../reports/Operating_Systems.class.php:60
+msgid "Type of systems"
+msgstr "Der Typ der Systeme"
+
+#: ../reports/Pageviews_per_Host.class.php:6
+#: ../reports/Pageviews_per_Host.class.php:10
+msgid "Pageviews per Host"
+msgstr "Seitenansichten pro Host"
+
+#: ../reports/Pageviews_per_Host.class.php:41
+#: ../reports/Pageviews_per_User.class.php:41
+msgid "1 page"
+msgstr "1 Seite"
+
+#: ../reports/Pageviews_per_Host.class.php:42
+#: ../reports/Pageviews_per_User.class.php:42
+msgid "2 pages"
+msgstr "2 Seiten"
+
+#: ../reports/Pageviews_per_Host.class.php:43
+#: ../reports/Pageviews_per_User.class.php:43
+msgid "3 pages"
+msgstr "3 Seiten"
+
+#: ../reports/Pageviews_per_Host.class.php:44
+#: ../reports/Pageviews_per_User.class.php:44
+msgid "4 pages"
+msgstr "4 Seiten"
+
+#: ../reports/Pageviews_per_Host.class.php:45
+#: ../reports/Pageviews_per_User.class.php:45
+msgid "5 pages"
+msgstr "5 Seiten"
+
+#: ../reports/Pageviews_per_Host.class.php:46
+#: ../reports/Pageviews_per_Host.class.php:47
+#: ../reports/Pageviews_per_Host.class.php:48
+#: ../reports/Pageviews_per_Host.class.php:49
+#: ../reports/Pageviews_per_User.class.php:46
+#: ../reports/Pageviews_per_User.class.php:47
+#: ../reports/Pageviews_per_User.class.php:48
+#: ../reports/Pageviews_per_User.class.php:49
+#, php-format
+msgid "%s to %s pages"
+msgstr "%s bis %s Seiten"
+
+#: ../reports/Pageviews_per_Host.class.php:50
+#: ../reports/Pageviews_per_User.class.php:50
+msgid "more than 100 pages"
+msgstr "mehr als 100 Seiten"
+
+#: ../reports/Pageviews_per_Host.class.php:54
+#: ../reports/Pageviews_per_User.class.php:54
+msgid "Average depth"
+msgstr "Durchschnittliche Verweildauer"
+
+#: ../reports/Pageviews_per_User.class.php:6
+#: ../reports/Pageviews_per_User.class.php:10
+msgid "Pageviews per User"
+msgstr "Seitenansichten pro Besucher"
+
+#: ../reports/Popular_Pages.class.php:6
+#: ../reports/Popular_Pages.class.php:10
+msgid "Popular Pages"
+msgstr "Beliebte Seiten"
+
+#: ../reports/Popular_Pages.class.php:44
+#: ../reports/Popular_Pages_404.class.php:72
+#: ../reports/Popular_Posts.class.php:45
+msgid "Total requests for pages"
+msgstr "Gesamtbitten um Seiten"
+
+#: ../reports/Popular_Pages.class.php:45
+#: ../reports/Popular_Pages_404.class.php:73
+#: ../reports/Popular_Posts.class.php:46
+msgid "Total unique pages addresses"
+msgstr "Einzigartige Gesamtseitenadressen"
+
+#: ../reports/Popular_Pages_404.class.php:6
+#: ../reports/Popular_Pages_404.class.php:10
+msgid "Popular Pages 404"
+msgstr "Beliebte Seiten 404"
+
+#: ../reports/Popular_Pages_404.class.php:63
+msgid "Show 20 pages of your site which refer to this"
+msgstr "20 Seiten Ihres Standortes vorzuführen, die auf diesen verweisen"
+
+#: ../reports/Popular_Posts.class.php:6
+#: ../reports/Popular_Posts.class.php:10
+msgid "Popular Posts"
+msgstr "Beliebte Posts"
+
+#: ../reports/Popular_Posts.class.php:36
+msgid "Publish Date"
+msgstr "Publish Date"
+
+#: ../reports/Popular_Titles.class.php:6
+#: ../reports/Popular_Titles.class.php:10
+msgid "Popular Titles"
+msgstr "Beliebteste Titel"
+
+#: ../reports/Referrers.class.php:65
+msgid "Direct Jump"
+msgstr "Direkter Aufruf"
+
+#: ../reports/Robots.class.php:6
+#: ../reports/Robots.class.php:10
+#: ../reports/Robots.class.php:132
+msgid "Robots"
+msgstr "Roboter"
+
+#: ../reports/Robots.class.php:40
+msgid "The first visit"
+msgstr "Erster Besuch"
+
+#: ../reports/Robots.class.php:41
+msgid "The last visit"
+msgstr "Letzter Besuch"
+
+#: ../reports/Robots.class.php:121
+msgid "About this robot"
+msgstr "Über diese Roboter"
+
+#: ../reports/Robots.class.php:133
+msgid "Other Robots"
+msgstr "Andere Roboter"
+
+#: ../reports/Screen_Resolution.class.php:6
+#: ../reports/Screen_Resolution.class.php:10
+msgid "Screen Resolution"
+msgstr "Bildschirmauflösung"
+
+#: ../reports/Screen_Resolution.class.php:34
+msgid "Other resolution"
+msgstr "Andere Auflösung"
+
+#: ../reports/Search_Phrases.class.php:6
+#: ../reports/Search_Phrases.class.php:10
+msgid "Search Phrases"
+msgstr "Suchbegriffe"
+
+#: ../reports/Search_Phrases.class.php:59
+#: ../reports/Search_Phrases_by_Date.class.php:66
+msgid "Page Found"
+msgstr "Seite gefunden"
+
+#: ../reports/Search_Phrases_by_Date.class.php:6
+#: ../reports/Search_Phrases_by_Date.class.php:10
+msgid "Search Phrases by Date"
+msgstr "Suchbegriffe nach Datum"
+
+#: ../reports/Site_Usage.class.php:6
+msgid "Site Usage/ by summary table"
+msgstr "Website-Aktivität / nach Zusammenfassung"
+
+#: ../reports/Site_Usage.class.php:10
+msgid "Site Usage"
+msgstr "Website-Aktivität"
+
+#: ../reports/Site_Usage.class.php:108
+#: ../reports/Site_Usage.class.php:119
+#: ../reports/Site_Usage.class.php:131
+#: ../reports/Site_Usage.class.php:165
+msgid "Monday"
+msgstr "Montag"
+
+#: ../reports/Site_Usage.class.php:109
+#: ../reports/Site_Usage.class.php:120
+#: ../reports/Site_Usage.class.php:132
+#: ../reports/Site_Usage.class.php:166
+msgid "Tuesday"
+msgstr "Dienstag"
+
+#: ../reports/Site_Usage.class.php:110
+#: ../reports/Site_Usage.class.php:121
+#: ../reports/Site_Usage.class.php:133
+#: ../reports/Site_Usage.class.php:167
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+#: ../reports/Site_Usage.class.php:111
+#: ../reports/Site_Usage.class.php:122
+#: ../reports/Site_Usage.class.php:134
+#: ../reports/Site_Usage.class.php:168
+msgid "Thursday"
+msgstr "Donnerstag"
+
+#: ../reports/Site_Usage.class.php:112
+#: ../reports/Site_Usage.class.php:123
+#: ../reports/Site_Usage.class.php:135
+#: ../reports/Site_Usage.class.php:169
+msgid "Friday"
+msgstr "Freitag"
+
+#: ../reports/Site_Usage.class.php:113
+#: ../reports/Site_Usage.class.php:124
+#: ../reports/Site_Usage.class.php:136
+#: ../reports/Site_Usage.class.php:170
+msgid "Saturday"
+msgstr "Samstag"
+
+#: ../reports/Site_Usage.class.php:114
+#: ../reports/Site_Usage.class.php:125
+#: ../reports/Site_Usage.class.php:137
+#: ../reports/Site_Usage.class.php:171
+msgid "Sunday"
+msgstr "Sonntag"
+
+#: ../reports/Site_Usage.class.php:129
+#: ../reports/Site_Usage.class.php:139
+msgid "Average by"
+msgstr "Durchschnittlich"
+
+#: ../reports/Site_Usage.class.php:139
+msgid "7 days"
+msgstr "7 Tage"
+
+#: ../reports/Site_Usage.class.php:144
+msgid "Pageviews by users"
+msgstr "Seitenzugriffe von Nutzern"
+
+#: ../reports/Site_Usage.class.php:181
+msgid "Average"
+msgstr "Durchschnittlicher Wert"
+
+#: ../reports/Site_Usage.class.php:188
+msgid "Total"
+msgstr "Gesamt"
+
+#~ msgid "Referrers "
+#~ msgstr "Verweisende Seiten"
+

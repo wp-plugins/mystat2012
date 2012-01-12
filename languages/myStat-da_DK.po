@@ -1,0 +1,807 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mySTAT 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-10-14 10:04+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Team Blogos <wordpress@blogos.dk>\n"
+"Language-Team: Team Blogos <wordpress@blogos.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2;plural=n != 1;\n"
+"X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_c;_e;__ngettext:1,2;__ngettext_noop:1,2;_n:1,2;_n_noop:1,2;_nc:1,2\n"
+"X-Poedit-Basepath: d:\\wordpress\\plugins\\mystat\n"
+"X-Poedit-SearchPath-0: d:\\wordpress\\plugins\\mystat\n"
+
+#: d:\wordpress\plugins\mystat/mystat.php:259
+msgid "Overview"
+msgstr "Oversigt"
+
+#: d:\wordpress\plugins\mystat/mystat.php:308
+msgid "Version"
+msgstr "Version"
+
+#: d:\wordpress\plugins\mystat/mystat.php:607
+msgid "ERROR: Host not found!"
+msgstr "Fejl: Vært ikke fundet!"
+
+#: d:\wordpress\plugins\mystat/mystat.php:654
+msgid "Title:"
+msgstr "Titel:"
+
+#: d:\wordpress\plugins\mystat/mystat.php:655
+#: d:\wordpress\plugins\mystat/mystat.php:674
+msgid "Pageviews"
+msgstr "Sidevisninger"
+
+#: d:\wordpress\plugins\mystat/mystat.php:656
+#: d:\wordpress\plugins\mystat/mystat.php:678
+msgid "Hosts"
+msgstr "Hosts"
+
+#: d:\wordpress\plugins\mystat/mystat.php:657
+#: d:\wordpress\plugins\mystat/mystat.php:682
+msgid "Users"
+msgstr "Brugere"
+
+#: d:\wordpress\plugins\mystat/mystat.php:658
+#: d:\wordpress\plugins\mystat/mystat.php:686
+msgid "Login Users"
+msgstr "Indloggede brugere"
+
+#: d:\wordpress\plugins\mystat/mystat.php:691
+#: d:\wordpress\plugins\mystat/mystat.php:692
+msgid "myStat statistics"
+msgstr "myStat-statistik"
+
+#: d:\wordpress\plugins\mystat/mystat.php:701
+msgid "myStat statistic for WordPress"
+msgstr "myStat-statistik for WordPress"
+
+#: d:\wordpress\plugins\mystat/mystat.php:701
+msgid "Unique visitors to post"
+msgstr "Unikke gæster til indlæg"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "January"
+msgstr "Januar"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "February"
+msgstr "Februar"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "March"
+msgstr "Marts"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "April"
+msgstr "April"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "May"
+msgstr "Maj"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "June"
+msgstr "Juni"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "July"
+msgstr "Juli"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "August"
+msgstr "August"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "September"
+msgstr "September"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "October"
+msgstr "Oktober"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "November"
+msgstr "November"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "December"
+msgstr "December"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "Su"
+msgstr "Sø"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "Mo"
+msgstr "Ma"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "Tu"
+msgstr "Ti"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "We"
+msgstr "On"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "Th"
+msgstr "To"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "Fr"
+msgstr "Fr"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:129
+msgid "Sa"
+msgstr "Lø"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:130
+msgid "Open Calendar"
+msgstr "Åbn kalender"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:130
+msgid "Close Calendar"
+msgstr "Luk kalender"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:130
+msgid "Previous Year"
+msgstr "Forrige år"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:130
+msgid "Previous Month"
+msgstr "Forrige måned"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:130
+msgid "Next Month"
+msgstr "Næste måned"
+
+#: d:\wordpress\plugins\mystat/modules/common.class.php:130
+msgid "Next Year"
+msgstr "Næste år"
+
+#: d:\wordpress\plugins\mystat/modules/report.class.php:29
+#, php-format
+msgid "The report for the period from %s to %s"
+msgstr "Rapport for perioden fra %s til %s"
+
+#: d:\wordpress\plugins\mystat/modules/report.class.php:29
+msgid "OK"
+msgstr "OK"
+
+#: d:\wordpress\plugins\mystat/modules/report.class.php:30
+msgid "All"
+msgstr "Alle"
+
+#: d:\wordpress\plugins\mystat/modules/report.class.php:30
+msgid "Today"
+msgstr "I dag"
+
+#: d:\wordpress\plugins\mystat/modules/report.class.php:30
+msgid "Yesterday"
+msgstr "I går"
+
+#: d:\wordpress\plugins\mystat/modules/report.class.php:30
+msgid "This Week"
+msgstr "Denne uge"
+
+#: d:\wordpress\plugins\mystat/modules/report.class.php:30
+msgid "This Month"
+msgstr "Denne måned"
+
+#: d:\wordpress\plugins\mystat/modules/report.class.php:30
+msgid "Last 7 Days"
+msgstr "Seneste 7 dage"
+
+#: d:\wordpress\plugins\mystat/modules/report.class.php:30
+msgid "Last 30 Days"
+msgstr "Seneste 30 dage"
+
+#: d:\wordpress\plugins\mystat/reports/Accept_Languages.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Accept_Languages.class.php:10
+msgid "Accept-Languages"
+msgstr "Accepterede sprog (HTTP)"
+
+#: d:\wordpress\plugins\mystat/reports/Accept_Languages.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Agents.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Browsers.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:14
+msgid "System"
+msgstr "System"
+
+#: d:\wordpress\plugins\mystat/reports/Accept_Languages.class.php:43
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:36
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:58
+msgid "Unknown"
+msgstr "Ukendt"
+
+#: d:\wordpress\plugins\mystat/reports/Accept_Languages.class.php:50
+#: d:\wordpress\plugins\mystat/reports/Agents.class.php:42
+#: d:\wordpress\plugins\mystat/reports/Browsers.class.php:91
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:56
+#: d:\wordpress\plugins\mystat/reports/Countries.class.php:43
+msgid "Total:"
+msgstr "I alt:"
+
+#: d:\wordpress\plugins\mystat/reports/Accept_Languages.class.php:52
+#: d:\wordpress\plugins\mystat/reports/Agents.class.php:44
+msgid "Total jumps from pages"
+msgstr "Hits fra sider i alt"
+
+#: d:\wordpress\plugins\mystat/reports/Accept_Languages.class.php:53
+msgid "Total unique Accept-Languages"
+msgstr "Unikke Accepterede-sprog i alt"
+
+#: d:\wordpress\plugins\mystat/reports/Agents.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Agents.class.php:10
+msgid "Agents"
+msgstr "Softwareagenter"
+
+#: d:\wordpress\plugins\mystat/reports/Agents.class.php:45
+msgid "Total unique agents"
+msgstr "Unikke softwareagenter i alt"
+
+#: d:\wordpress\plugins\mystat/reports/Browsers.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Browsers.class.php:10
+#: d:\wordpress\plugins\mystat/reports/Browsers.class.php:93
+msgid "Browsers"
+msgstr "Browsere"
+
+#: d:\wordpress\plugins\mystat/reports/Browsers.class.php:75
+#: d:\wordpress\plugins\mystat/reports/Browsers.class.php:94
+msgid "Other browsers"
+msgstr "Andre browsere"
+
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:10
+msgid "Colour Depth"
+msgstr "Farvedybde"
+
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:39
+msgid "Other colour depth"
+msgstr "Anden farvedybde"
+
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:47
+msgid "256 colors"
+msgstr "256 farver"
+
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:48
+msgid "65 thousand colors"
+msgstr "65 tusind farver"
+
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:49
+#: d:\wordpress\plugins\mystat/reports/Colour_Depth.class.php:50
+msgid "16 mln. colors"
+msgstr "16 mio. farver"
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:10
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:32
+#: d:\wordpress\plugins\mystat/reports/Database_Size.class.php:14
+msgid "Configuration"
+msgstr "Opsætning"
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:21
+msgid "Changes dir mode to 0777 for '/data/' dir"
+msgstr "Ændrer mappe-mod (CHMOD) til 0777 for 'data'-mappen"
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:34
+msgid "Main settings"
+msgstr "Grundlæggende indstillinger"
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:35
+msgid "It sets period of complete statistics storage per days. The longer the period, the more space is required for the database. The database size influences the system performance, it slows down with larger database. Database size can be monitored in the report \"Database size\"."
+msgstr "Her angives tidsrummet, hvor der skal opgøres komplet statistik, i dage. Jo længere periode, jo mere plads er der brug for i databasen. Databasens størrelse påvirker systemets ydelse; den går ned, jo større database. Databasens størrelse kan overvåges i rapporten \"Databasestørrelse\"."
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:37
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:38
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:39
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:40
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:41
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:42
+msgid "days"
+msgstr "dage"
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:43
+msgid "1 year"
+msgstr "1 år"
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:44
+msgid "1,5 years"
+msgstr "1½ år"
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:45
+msgid "2 years"
+msgstr "2 år"
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:48
+msgid "Show unique visitors to post"
+msgstr "Vis unikke besøgende til indlæg"
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:51
+msgid "Log debug information"
+msgstr "Log debug-information"
+
+#: d:\wordpress\plugins\mystat/reports/Configuration.class.php:54
+msgid "Save settings"
+msgstr "Gem indstillinger"
+
+#: d:\wordpress\plugins\mystat/reports/Countries.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Countries.class.php:10
+msgid "Countries"
+msgstr "Lande"
+
+#: d:\wordpress\plugins\mystat/reports/Countries.class.php:14
+msgid "Geography"
+msgstr "Geografi"
+
+#: d:\wordpress\plugins\mystat/reports/Countries.class.php:35
+msgid "Not defined"
+msgstr "Udefineret"
+
+#: d:\wordpress\plugins\mystat/reports/Countries.class.php:47
+msgid "Total unique countries"
+msgstr "Unikke lande i alt"
+
+#: d:\wordpress\plugins\mystat/reports/Database_Size.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Database_Size.class.php:10
+#: d:\wordpress\plugins\mystat/reports/Database_Size.class.php:42
+msgid "Database Size"
+msgstr "Databasestørrelse"
+
+#: d:\wordpress\plugins\mystat/reports/Database_Size.class.php:42
+msgid "Date"
+msgstr "Dato"
+
+#: d:\wordpress\plugins\mystat/reports/Database_Size.class.php:42
+msgid "Changes from the previous day"
+msgstr "Ændringer fra dagen før"
+
+#: d:\wordpress\plugins\mystat/reports/Domain_Names.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Domain_Names.class.php:10
+msgid "Domain Names"
+msgstr "Domænenavne"
+
+#: d:\wordpress\plugins\mystat/reports/Domain_Names.class.php:14
+msgid "Pages"
+msgstr "Sider"
+
+#: d:\wordpress\plugins\mystat/reports/IP_Addresses.class.php:6
+#: d:\wordpress\plugins\mystat/reports/IP_Addresses.class.php:10
+msgid "IP Addresses"
+msgstr "IP-adresser"
+
+#: d:\wordpress\plugins\mystat/reports/IP_Addresses.class.php:55
+msgid "IP-address info"
+msgstr "Info om IP-adresser"
+
+#: d:\wordpress\plugins\mystat/reports/JavaScript.class.php:6
+#: d:\wordpress\plugins\mystat/reports/JavaScript.class.php:10
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: d:\wordpress\plugins\mystat/reports/JavaScript.class.php:29
+msgid "Version of JavaScript"
+msgstr "JavaScript-version"
+
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Directories.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Directories.class.php:10
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Directories.class.php:66
+msgid "Jumps from Directories"
+msgstr "Hits fra weboversigter"
+
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Directories.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Popular_Sites.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Ratings.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Search_Engines.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Links_to_Pages_404.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Referrers.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Referrers.class.php:10
+#: d:\wordpress\plugins\mystat/reports/Referrers.class.php:14
+msgid "Referrers"
+msgstr "Referrers"
+
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Directories.class.php:35
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Popular_Sites.class.php:35
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Ratings.class.php:35
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Search_Engines.class.php:35
+#: d:\wordpress\plugins\mystat/reports/Links_to_Pages_404.class.php:29
+#: d:\wordpress\plugins\mystat/reports/Popular_Pages_404.class.php:29
+msgid "No URL"
+msgstr "Ingen URL"
+
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Directories.class.php:61
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Popular_Sites.class.php:61
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Ratings.class.php:61
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Search_Engines.class.php:61
+#: d:\wordpress\plugins\mystat/reports/Popular_Titles.class.php:60
+msgid "Show 20 most popular addresses"
+msgstr "Vis 20 populæreste adresser"
+
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Directories.class.php:68
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Popular_Sites.class.php:68
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Ratings.class.php:68
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Search_Engines.class.php:68
+msgid "Other links"
+msgstr "Andre links"
+
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Directories.class.php:70
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Popular_Sites.class.php:70
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Ratings.class.php:70
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Search_Engines.class.php:70
+msgid "Direct jump (without a referrer)"
+msgstr "Direkte hits (uden en referrer)"
+
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Popular_Sites.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Popular_Sites.class.php:10
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Popular_Sites.class.php:66
+msgid "Jumps from Popular Sites"
+msgstr "Hits fra Populære sites"
+
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Ratings.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Ratings.class.php:10
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Ratings.class.php:66
+msgid "Jumps from Ratings"
+msgstr "Hits fra Bedømmelsesoversigter"
+
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Search_Engines.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Search_Engines.class.php:10
+#: d:\wordpress\plugins\mystat/reports/Jumps_from_Search_Engines.class.php:66
+msgid "Jumps from Search Engines"
+msgstr "Hits fra søgemaskiner"
+
+#: d:\wordpress\plugins\mystat/reports/Links_to_Pages_404.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Links_to_Pages_404.class.php:10
+msgid "Links to Pages 404"
+msgstr "Links til fejl 404-sider"
+
+#: d:\wordpress\plugins\mystat/reports/Links_to_Pages_404.class.php:66
+#: d:\wordpress\plugins\mystat/reports/Referrers.class.php:62
+msgid "Show 20 most popular target pages, visited from the current one"
+msgstr "Vis 20 populæreste målsider, besøgt fra den aktuelle"
+
+#: d:\wordpress\plugins\mystat/reports/Links_to_Pages_404.class.php:76
+msgid "Total unique referrers"
+msgstr "Unikke referrers i alt"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:10
+msgid "Loading Speed"
+msgstr "Indlæsningshastighed"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:14
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:14
+msgid "Audience"
+msgstr "Publikum"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:46
+msgid "Less than 1 second"
+msgstr "Under 1 sekund"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:47
+msgid "1-2 seconds"
+msgstr "1-2 sekunder"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:48
+msgid "3-4 seconds"
+msgstr "3-4 sekunder"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:49
+msgid "5-6 seconds"
+msgstr "5-6 sekunder"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:50
+msgid "7-8 seconds"
+msgstr "7-8 sekunder"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:51
+msgid "9-10 seconds"
+msgstr "9-10 sekunder"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:52
+msgid "11-15 seconds"
+msgstr "11-15 sekunder"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:53
+msgid "16-20 seconds"
+msgstr "16-20 sekunder"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:54
+msgid "21-30 seconds"
+msgstr "21-30 sekunder"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:55
+msgid "31-45 seconds"
+msgstr "31-45 sekunder"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:56
+msgid "46-60 seconds"
+msgstr "46-60 sekunder"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:57
+msgid "More than 1 minute"
+msgstr "Mere end 1 minut"
+
+#: d:\wordpress\plugins\mystat/reports/Loading_Speed.class.php:61
+msgid "Average time"
+msgstr "Gennemsnitstid"
+
+#: d:\wordpress\plugins\mystat/reports/Operating_Systems.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Operating_Systems.class.php:10
+#: d:\wordpress\plugins\mystat/reports/Operating_Systems.class.php:66
+msgid "Operating Systems"
+msgstr "Operativsystemer"
+
+#: d:\wordpress\plugins\mystat/reports/Operating_Systems.class.php:28
+msgid "16 bit systems"
+msgstr "16-bit systemer"
+
+#: d:\wordpress\plugins\mystat/reports/Operating_Systems.class.php:31
+msgid "32 bit systems"
+msgstr "32-bit systemer"
+
+#: d:\wordpress\plugins\mystat/reports/Operating_Systems.class.php:34
+msgid "64 bit systems"
+msgstr "64-bit systemer"
+
+#: d:\wordpress\plugins\mystat/reports/Operating_Systems.class.php:61
+msgid "Type of systems"
+msgstr "Systemtype"
+
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:10
+msgid "Pageviews per Host"
+msgstr "Sidevisninger per vært"
+
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:43
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:43
+msgid "1 page"
+msgstr "1 side"
+
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:44
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:44
+msgid "2 pages"
+msgstr "2 sider"
+
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:45
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:45
+msgid "3 pages"
+msgstr "3 sider"
+
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:46
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:46
+msgid "4 pages"
+msgstr "4 sider"
+
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:47
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:47
+msgid "5 pages"
+msgstr "5 sider"
+
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:48
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:49
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:50
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:51
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:48
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:49
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:50
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:51
+#, php-format
+msgid "%s to %s pages"
+msgstr "%s til %s sider"
+
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:52
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:52
+msgid "more than 100 pages"
+msgstr "mere end 100 sider"
+
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_Host.class.php:56
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:56
+msgid "Average depth"
+msgstr "Gennemsnitsdybde"
+
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Pageviews_per_User.class.php:10
+msgid "Pageviews per User"
+msgstr "Sidevisninger per bruger"
+
+#: d:\wordpress\plugins\mystat/reports/Popular_Pages.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Popular_Pages.class.php:10
+msgid "Popular Pages"
+msgstr "Populære sider"
+
+#: d:\wordpress\plugins\mystat/reports/Popular_Pages.class.php:44
+#: d:\wordpress\plugins\mystat/reports/Popular_Pages_404.class.php:71
+#: d:\wordpress\plugins\mystat/reports/Popular_Posts.class.php:45
+msgid "Total requests for pages"
+msgstr "Antal forespørgsler efter sider"
+
+#: d:\wordpress\plugins\mystat/reports/Popular_Pages.class.php:45
+#: d:\wordpress\plugins\mystat/reports/Popular_Pages_404.class.php:72
+#: d:\wordpress\plugins\mystat/reports/Popular_Posts.class.php:46
+msgid "Total unique pages addresses"
+msgstr "Unikke sideadresser i alt"
+
+#: d:\wordpress\plugins\mystat/reports/Popular_Pages_404.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Popular_Pages_404.class.php:10
+msgid "Popular Pages 404"
+msgstr "Populære fejl 404-sider"
+
+#: d:\wordpress\plugins\mystat/reports/Popular_Pages_404.class.php:62
+msgid "Show 20 pages of your site which refer to this"
+msgstr "Vis 20 af dine sites sider, som refererer til denne"
+
+#: d:\wordpress\plugins\mystat/reports/Popular_Posts.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Popular_Posts.class.php:10
+msgid "Popular Posts"
+msgstr "Populære indlæg"
+
+#: d:\wordpress\plugins\mystat/reports/Popular_Posts.class.php:36
+msgid "Publish Date"
+msgstr "Udgivelsesdato"
+
+#: d:\wordpress\plugins\mystat/reports/Popular_Titles.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Popular_Titles.class.php:10
+msgid "Popular Titles"
+msgstr "Populære titler"
+
+#: d:\wordpress\plugins\mystat/reports/Referrers.class.php:64
+msgid "Direct Jump"
+msgstr "Direkte hits"
+
+#: d:\wordpress\plugins\mystat/reports/Robots.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Robots.class.php:10
+#: d:\wordpress\plugins\mystat/reports/Robots.class.php:131
+msgid "Robots"
+msgstr "Robotter"
+
+#: d:\wordpress\plugins\mystat/reports/Robots.class.php:40
+msgid "The first visit"
+msgstr "Første besøg"
+
+#: d:\wordpress\plugins\mystat/reports/Robots.class.php:41
+msgid "The last visit"
+msgstr "Sidste besøg"
+
+#: d:\wordpress\plugins\mystat/reports/Robots.class.php:120
+msgid "About this robot"
+msgstr "Om denne robot"
+
+#: d:\wordpress\plugins\mystat/reports/Robots.class.php:132
+msgid "Other Robots"
+msgstr "Andre robotter"
+
+#: d:\wordpress\plugins\mystat/reports/Screen_Resolution.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Screen_Resolution.class.php:10
+msgid "Screen Resolution"
+msgstr "Skærmopløsning"
+
+#: d:\wordpress\plugins\mystat/reports/Screen_Resolution.class.php:36
+msgid "Other resolution"
+msgstr "Andre opløsninger"
+
+#: d:\wordpress\plugins\mystat/reports/Search_Phrases.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Search_Phrases.class.php:10
+msgid "Search Phrases"
+msgstr "Søgefraser"
+
+#: d:\wordpress\plugins\mystat/reports/Search_Phrases.class.php:59
+#: d:\wordpress\plugins\mystat/reports/Search_Phrases_by_Date.class.php:66
+msgid "Page Found"
+msgstr "Side fundet"
+
+#: d:\wordpress\plugins\mystat/reports/Search_Phrases_by_Date.class.php:6
+#: d:\wordpress\plugins\mystat/reports/Search_Phrases_by_Date.class.php:10
+msgid "Search Phrases by Date"
+msgstr "Søgefraser efter dato"
+
+#: d:\wordpress\plugins\mystat/reports/SEO_by_domain.class.php:6
+#: d:\wordpress\plugins\mystat/reports/SEO_by_domain.class.php:10
+msgid "SEO by domain"
+msgstr "SEO efter domæne"
+
+#: d:\wordpress\plugins\mystat/reports/SEO_by_domain.class.php:14
+msgid "SEO"
+msgstr "SEO"
+
+#: d:\wordpress\plugins\mystat/reports/SEO_by_domain.class.php:21
+msgid "Choose domain"
+msgstr "Vælg domæne"
+
+#: d:\wordpress\plugins\mystat/reports/SEO_by_domain.class.php:36
+msgid "Google PR"
+msgstr "Google PR"
+
+#: d:\wordpress\plugins\mystat/reports/SEO_by_domain.class.php:40
+msgid "Yandex CY"
+msgstr "Yandex CY"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:6
+msgid "Site Usage/ by summary table"
+msgstr "Brug af site / som tabeloversigt"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:10
+msgid "Site Usage"
+msgstr "Brug af site"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:116
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:127
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:139
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:173
+msgid "Monday"
+msgstr "Mandag"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:117
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:128
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:140
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:174
+msgid "Tuesday"
+msgstr "Tirsdag"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:118
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:129
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:141
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:175
+msgid "Wednesday"
+msgstr "Onsdag"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:119
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:130
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:142
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:176
+msgid "Thursday"
+msgstr "Torsdag"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:120
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:131
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:143
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:177
+msgid "Friday"
+msgstr "Fredag"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:121
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:132
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:144
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:178
+msgid "Saturday"
+msgstr "Lørdag"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:122
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:133
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:145
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:179
+msgid "Sunday"
+msgstr "Søndag"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:137
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:147
+msgid "Average by"
+msgstr "Gennemsnit pr."
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:147
+msgid "7 days"
+msgstr "7 dage"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:152
+msgid "Pageviews by users"
+msgstr "Sidevisninger pr. bruger"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:189
+msgid "Average"
+msgstr "Gennemsnit"
+
+#: d:\wordpress\plugins\mystat/reports/Site_Usage.class.php:196
+msgid "Total"
+msgstr "I alt"
+
+#~ msgid "Referrers "
+#~ msgstr "Referrers "
+
