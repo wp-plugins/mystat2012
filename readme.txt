@@ -3,7 +3,7 @@ Contributors: KILLER
 Donate link: http://sandbox.net.ua/mystat/
 Tags: stat, statistic, graph, statpress, visitor, host, best, statistics, mystat, stats, visitors, geo, user, users, plugins, plugin, widget, Post, admin, posts, comments, page, rss
 Requires at least: 2.7
-Tested up to: 2.9
+Tested up to: 3.1
 Stable tag: 2.6
 
 myStat is a flexible and versatile system intended for accumulation and analysis of the site attendance statistics.
