@@ -2,8 +2,8 @@
 Contributors: KILLER
 Donate link: http://sandbox.net.ua/mystat/
 Tags: stat, statistic, graph, statpress, visitor, host, best, statistics, mystat, stats, visitors, geo, user, users, plugins, plugin, widget, Post, admin, posts, comments, page, rss
-Requires at least: 2.7
-Tested up to: 3.1
+Requires at least: 4.0
+Tested up to: 4.1.1
 Stable tag: 2.6
 
 myStat is a flexible and versatile system intended for accumulation and analysis of the site attendance statistics.
@@ -11,6 +11,8 @@ myStat is a flexible and versatile system intended for accumulation and analysis
 == Description ==
 
  myStat suits to upcoming projects perfectly. There are more than 50 reports available in the system. The system is easy to install and to set up; it allows counting all the visitors of your web-site - both humans and robots. All visits data is stored at your server, which meets safety and confidentiality requirements.
+
+== History ==
 
  = version 2.6 =
  * [+]  Danish language (tnx GeorgWP)
@@ -40,8 +42,6 @@ myStat is a flexible and versatile system intended for accumulation and analysis
  * [*]  Fix bug for slow server
  * [*]  Change all structure
  * [*]  Fix more bugs
-
-== History ==
 
  = version 1.26 =
  * [*]  Fix bugs
@@ -140,7 +140,7 @@ myStat is a flexible and versatile system intended for accumulation and analysis
 
 == Installation ==
 
-1. Upload plugin to the `/wp-content/plugins/wp-mystat/` directory
+1. Upload plugin to the `/wp-content/plugins/mystat/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Screenshots ==
