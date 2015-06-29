@@ -26,8 +26,8 @@ class referer{
 
   public function isNeedUpdate(){
     if($this->dir===false){return false;}
-    $md5 = @file_get_contents('http://my-stat.com/referer.dat.md5');
-    if($md5!='' and (!file_exists($this->dir.'/'.$this->file) or $md5!=md5_file($this->dir.'/'.$this->file))){
+    $md5 = @file_get_contents('http://my-stat.com/update/referer.dat.md5');
+    if(strlen($md5)==32 and (!file_exists($this->dir.'/'.$this->file) or $md5!=md5_file($this->dir.'/'.$this->file))){
       return true;
     }
     return false;
@@ -35,7 +35,9 @@ class referer{
 
   public function update(){
     if($this->isNeedUpdate()){
-      $file = file_get_contents('http://my-stat.com/referer.dat');
+      $md5 = @file_get_contents('http://my-stat.com/update/referer.dat.md5');
+      $file = @file_get_contents('http://my-stat.com/update/referer.dat');
+      if($md5 != md5($file)){return false;}
       if(file_exists($this->dir.'/'.$this->file)){
         unlink($this->dir.'/'.$this->file);
       }

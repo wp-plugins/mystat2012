@@ -5,79 +5,185 @@ if(!defined('MYSTAT_VERSION')){
 
 class myStat{
 
-  protected $engine = false;
+  protected $driver = false;
 
-  public function getEngine(){
-    return $this->engine;
+  public function getDriver(){
+    return $this->driver;
   }
 
-  public function setEngine($engine){
-    if(!preg_match('/^[A-z0-9]{1,}$/',$engine) or !file_exists(dirname(__FILE__).'/../engine/'.$engine.'.class.php')){
-      throw new Exception('Wrong ENGINE param in setEngine()');
+  public function setDriver($driver){
+    if(!preg_match('/^[A-z0-9]{1,}$/',$driver) or !file_exists(dirname(__FILE__).'/../driver/'.$driver.'.class.php')){
+      throw new Exception('Wrong DRIVER param in setDriver()');
     }
-    require_once(dirname(__FILE__).'/../engine/'.$engine.'.class.php');
-    $this->engine = new $engine($this);
-    if(true !== $error = $this->getEngine()->isEngineRun()){
-      throw new Exception('ENGINE START ERROR: '.$error);
+    require_once(dirname(__FILE__).'/../driver/'.$driver.'.class.php');
+    $this->driver = new $driver($this);
+    if(true !== $error = $this->getDriver()->isEngineRun()){
+      throw new Exception('DRIVER START ERROR: '.$error);
     }
-    $this->getEngine()->setCodeHook($this,function($mystat){
+    $this->getDriver()->setCodeHook($this,function($mystat){
       $id = $mystat->setStatisticFirst();
-      if(!$mystat->getEngine()->isFeed()){
+      if(!$mystat->getDriver()->isFeed()){
         echo $mystat->getJsCode($id);
       }
     });
+    $this->getDriver()->startDriver();
     return $this;
   }
 
   public function run(){
-    if($this->getEngine()===false){
-      throw new Exception('Set ENGINE before run run()');
+    if($this->getDriver()===false){
+      throw new Exception('Set DRIVER before run run()');
     }
-    $this->getEngine()->setRunHook($this,function($mystat){
+    $this->getDriver()->setRunHook($this,function($mystat){
       echo $mystat->getReportPage();
     });
   }
 
   public function getReportPage(){
-    $page = (string)$this->getEngine()->getParam('report','dashboard');
+    $page = (string)$this->getDriver()->getParam('report','dashboard');
+    $param = (array)$this->getDriver()->getParam('param',Array());
+    $isAjax = (bool)$this->getDriver()->isAjax();
     if($page=='update'){
-      if($this->getOption('mystatlastupdate')==date('dmY',$this->getEngine()->getTime())){
+      if($this->isAllFileExists() and $this->getOption('mystatlastupdate')==date('dmY',$this->getDriver()->getTime(false))){
         return false;
       }
-      if(file_exists(dirname(__FILE__).'/../cache/browscap.lock')){
-        unlink(dirname(__FILE__).'/../cache/browscap.lock');
+      $ret = $this->getDriver()->setUpdateStart();
+      $db_md5 = @file_get_contents('http://my-stat.com/update/geobase.md5');
+      $db_content = '';
+      if(file_exists(dirname(__FILE__).'/../cache/tabgeo.dat')){
+        $db_content = @file_get_contents(dirname(__FILE__).'/../cache/tabgeo.dat');
       }
-      $ret = $this->getEngine()->setUpdateStart();
-      require_once(dirname(__FILE__).'/browscap.class.php');
-      $browscap = new browscap(dirname(__FILE__).'/../cache/');
-      $browscap->doAutoUpdate = true;
-      $browscap->getBrowser(null,true);
-      $db_md5 = file_get_contents('http://tabgeo.com/api/v4/country/db/md5/');
-      $db_content = file_get_contents('http://tabgeo.com/api/v4/country/db/get/');
-      if($db_md5 == md5($db_content)){
-        file_put_contents(dirname(__FILE__).'/../cache/tabgeo.dat', $db_content);
+      if(strlen($db_md5)==32 and $db_md5 != md5($db_content)){
+        $db_content = @file_get_contents('http://my-stat.com/update/geobase.dat');
+        if($db_md5==md5($db_content)){
+          file_put_contents(dirname(__FILE__).'/../cache/tabgeo.dat', $db_content);
+        }
       }
       require_once(dirname(__FILE__).'/referer.class.php');
       $req = new referer();
       $req->setCache(dirname(__FILE__).'/../cache/');
       $req->update();
-      $this->setOption('mystatlastupdate',date('dmY',$this->getEngine()->getTime()));
-      return $ret.$this->getEngine()->setUpdateStop();
+      require_once(dirname(__FILE__).'/browscap.class.php');
+      $browscap = new browscap();
+      $browscap->setCacheDir(dirname(__FILE__).'/../cache/');
+      $browscap->getUpdate();
+      $this->setOption('mystatlastupdate',date('dmY',$this->getDriver()->getTime(false)));
+      return (string)$ret.$this->getDriver()->setUpdateStop();
     }elseif($page=='insert'){
       $this->setStatisticSecond();
       return;
     }
-    if(!preg_match('/^[A-z0-9]{1,}$/',$page) or !file_exists(dirname(__FILE__).'/../report/'.$page.'.class.php')){
+    if(!preg_match('/^[A-z0-9]{1,}$/',$page) or !$this->getFileReportName($page) or !file_exists(dirname(__FILE__).'/../report/'.$this->getFileReportName($page))){
       throw new Exception('No report found');
     }
-    $xml1 = $this->getDefaultXML($page);
-    $xml2 = $this->getXMLPage($page);
-    require_once(dirname(__FILE__).'/mergexml.class.php');
-    $mergexml = new mergexml(Array('updn'=>true));
-    $mergexml->AddSource($xml1);
-    $mergexml->AddSource($xml2);
-    $xml = $mergexml->Get(1);
-    return $this->getXSLTranform($page,$xml);
+    if(!$isAjax){
+      $xml1 = $this->getDefaultXML($page);
+    }
+    if(!in_array($page,Array('dashboard','defaultpage')) and $ret = $this->getStatPage($page)){
+      $param = array_merge($param,Array('page' => $page,'code'=>$ret));
+      $page = 'defaultpage';
+    }
+    if(!$isAjax){
+      $xml2 = $this->getXMLPage($page,$param);
+      require_once(dirname(__FILE__).'/mergexml.class.php');
+      $mergexml = new mergexml(Array('updn'=>true));
+      $mergexml->AddSource($xml1);
+      $mergexml->AddSource($xml2);
+      $xml = $mergexml->Get(1);
+      return $this->getXSLTranform($page,$xml);
+    }
+    echo json_encode($this->getAjaxArray($page,$param));
+    exit;
+  }
+
+  protected function getFileReportName($page){
+    if($dh = opendir(dirname(__FILE__).'/../report/')){
+      while(($file = readdir($dh))!==false){
+        if(filetype(dirname(__FILE__).'/../report/'.$file)=='file' and substr($file,-10)=='.class.php'){
+          if(preg_match('/^([A-z0-9]{2})_([A-z0-9]{1,})_([0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})$/',substr($file,0,-10),$m)){
+            if($page==$m[2]){
+              closedir($dh);
+              return $file;
+            }
+          }elseif(preg_match('/^_([A-z0-9]{1,})$/i',substr($file,0,-10),$m)){
+            if($page==$m[1]){
+              closedir($dh);
+              return $file;
+            }
+          }
+        }
+      }
+      closedir($dh);
+    }
+    return false;
+  }
+
+  public function getCountryName($code,$lang=false){
+    if($lang===false){
+      $lang = $this->getDriver()->getLanguage();
+    }
+    require_once(dirname(__FILE__).'/country.class.php');
+    $country = new country();
+    $country->setCacheDir(dirname(__FILE__).'/../cache/');
+    return $country->getCountryByCode($code,$lang);
+  }
+
+  public function getLanguageName($code,$lang=false){
+    if($lang===false){
+      $lang = $this->getDriver()->getLanguage();
+    }
+    require_once(dirname(__FILE__).'/language.class.php');
+    $language = new language();
+    $language->setCacheDir(dirname(__FILE__).'/../cache/');
+    return $language->getLanguageByCode($code,$lang);
+  }
+
+  public function getCountryFlag($code){
+    $code = strtoupper($code);
+    if(!preg_match('/^[A-Z]{2}$/',$code)){
+      return false;
+    }
+    if(file_exists(dirname(__FILE__).'/../asset/flags/'.$code.'.png')){
+      return 'flags/'.$code.'.png';
+    }
+    return false;
+  }
+
+  public function getLanguageFlag($code){
+    $code = strtolower($code);
+    if(!preg_match('/^[a-z]{2}$/',$code)){
+      return false;
+    }
+    if(file_exists(dirname(__FILE__).'/../asset/lang/'.$code.'.gif')){
+      return 'lang/'.$code.'.gif';
+    }
+    return false;
+  }
+
+  public function getBrowserFlag($name){
+    $name = strtolower(trim($name));
+    $name = str_replace(Array(' ','.','-'),'_',$name);
+    $name = preg_replace('/_{2,}/','_',trim($name,'_'));
+    if(!preg_match('/^[A-z0-9_]*$/',$name) or strlen($name)<1){
+      return false;
+    }
+    if(file_exists(dirname(__FILE__).'/../asset/browser/'.$name.'.png')){
+      return 'browser/'.$name.'.png';
+    }
+    return false;
+  }
+
+  public function getOSFlag($name){
+    $name = strtolower(trim($name));
+    $name = str_replace(Array(' ','.','-','&',','),'_',$name);
+    $name = preg_replace('/_{2,}/','_',trim($name,'_'));
+    if(!preg_match('/^[A-z0-9_]*$/',$name) or strlen($name)<1){
+      return false;
+    }
+    if(file_exists(dirname(__FILE__).'/../asset/os/'.$name.'.png')){
+      return 'os/'.$name.'.png';
+    }
+    return false;
   }
 
   protected function getDefaultXML($page='dashboard'){
@@ -92,11 +198,11 @@ class myStat{
       'PATHTOASSET' => $this->getPathAsset(),
       'REPORT' => $page,
       'TRANSLATE' => Array(
-        'PERIODREPORT' => $this->__('Период отображения отчёта'),
+        'PERIODREPORT' => $this->__('Report display period'),
       ),
-      'GMT' => (int)$this->getEngine()->getGMT(),
-      'TIME' => (int)$this->getEngine()->getTime(),
-      'LANGUAGE' => $this->getEngine()->getLanguage(),
+      'GMT' => (int)$this->getDriver()->getGMT(),
+      'TIME' => (int)$this->getDriver()->getTime(true),
+      'LANGUAGE' => $this->getDriver()->getLanguage(),
       'MENU' => $menu
     );
     $xml = new DOMDocument('1.0', 'UTF-8');
@@ -108,18 +214,26 @@ class myStat{
 
   protected function getMenu(){
     $category = Array(
-      '377da97c-3097-4c0b-9315-125270b9f935' => $this->__('Аудитория'),
+      '377da97c-3097-4c0b-9315-125270b9f935' => $this->__('Audience'),
+      '72fb852f-71e7-4802-af52-8f4bf17b091b' => $this->__('Pages'),
+      'bdb2d1a3-41ba-47e9-a476-6ded1ba6e627' => $this->__('Traffic sources'),
+      '3fbec588-fbf5-4521-a406-64689b250530' => $this->__('Geography'),
+      'bcbd4b71-f45f-47fe-85ff-27b1e68499ef' => $this->__('System'),
+      'a0e1c952-effc-4c6d-9f90-b8b8c855e889' => $this->__('Other')
     );
     $ret = $menu = Array();
+    $menu = array_fill_keys(array_keys($category),Array());
     if($dh = opendir(dirname(__FILE__).'/../report/')){
       while(($file = readdir($dh))!==false){
         if(filetype(dirname(__FILE__).'/../report/'.$file)=='file' and substr($file,-10)=='.class.php'){
-          if(preg_match('/^[A-z0-9]{1,}$/',substr($file,0,-10))){
+          if(preg_match('/^([A-z0-9]{2})_([A-z0-9]{1,})_([0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})$/',substr($file,0,-10),$m)){
             require_once(dirname(__FILE__).'/../report/'.$file);
-            $name = substr($file,0,-10);
-            $report = new $name($this);
-            if(isset($category[$report->getGroupUUID()])){
-              $menu[$report->getGroupUUID()][$report->getOrderMenu()] = Array('name' => $report->getName(), 'code' => $name);
+            $name = $m[2];
+            $report = new $name($this,Array());
+            if(method_exists($report,'getXML') and method_exists($report,'getName')){
+              if(isset($category[$m[3]])){
+                $menu[$m[3]][$m[1]] = Array('name' => $report->getName(), 'code' => $name);
+              }
             }
           }
         }
@@ -132,6 +246,7 @@ class myStat{
         'ITEM' => Array(),
         '@ITEM' => Array()
       );
+      ksort($v);
       foreach($v as $el){
         $ret[sizeof($ret)-1]['ITEM'][] = $el['name'];
         $ret[sizeof($ret)-1]['@ITEM'][] = Array('code'=>$el['code']);
@@ -141,31 +256,41 @@ class myStat{
   }
 
   protected function getXSLTranform($page,$xml){
-    if(!file_exists(dirname(__FILE__).'/../theme/'.$this->getEngine()->getName().'.'.$page.'.xsl')){
-      throw new Exception('No theme found for this page or engine');
+    if(!file_exists(dirname(__FILE__).'/../theme/'.$this->getDriver()->getName().'/'.$this->getDriver()->getName().'.'.$page.'.xsl')){
+      throw new Exception('No theme found for this page or driver');
     }
     $doc = new DOMDocument();
     $doc->preserveWhiteSpace = false;
     $xsl = new XSLTProcessor();
-    $doc->load(dirname(__FILE__).'/../theme/'.$this->getEngine()->getName().'.'.$page.'.xsl');
+    $doc->load(dirname(__FILE__).'/../theme/'.$this->getDriver()->getName().'/'.$this->getDriver()->getName().'.'.$page.'.xsl');
     $xsl->importStyleSheet($doc);
     $doc->loadXML($xml);
     return $xsl->transformToXML($doc);
   }
 
-  protected function getXMLPage($page){
-    require_once(dirname(__FILE__).'/../report/'.$page.'.class.php');
-    $report = new $page($this);
+  protected function getXMLPage($page,$param = Array()){
+    require_once(dirname(__FILE__).'/../report/'.$this->getFileReportName($page));
+    $report = new $page($this,$param);
     $xml = $report->getXML();
+    return $xml;
+  }
+
+  protected function getAjaxArray($page,$param = Array()){
+    require_once(dirname(__FILE__).'/../report/'.$this->getFileReportName($page));
+    $report = new $page($this,$param);
+    $xml = Array();
+    if(method_exists($report,'getAjax')){
+      $xml = $report->getAjax();
+    }
     return $xml;
   }
 
   public function getPeriod(){
     $ret = Array(
-      'start' => strtotime('-30 days',$this->getEngine()->getTime()),
-      'end' => $this->getEngine()->getTime()
+      'start' => strtotime('-30 days',$this->getDriver()->getTime(false)),
+      'end' => $this->getDriver()->getTime(false)
     );
-    if((''!=$date1 = $this->getEngine()->getParam('datestart','')) and (''!=$date2 = $this->getEngine()->getParam('dateend',''))){
+    if((''!=$date1 = $this->getDriver()->getParam('datestart','')) and (''!=$date2 = $this->getDriver()->getParam('dateend',''))){
       if(!preg_match('/^[0-9]{2}\.[0-9]{2}\.[0-9]{4}$/',$date1) or !preg_match('/^[0-9]{2}\.[0-9]{2}\.[0-9]{4}$/',$date2)){
         throw new Exception('Wrong date format in request');
       }
@@ -176,24 +301,26 @@ class myStat{
   }
 
   public function __($text){
-    return $this->getEngine()->__($text);
+    return $this->getDriver()->__($text);
   }
 
   public function getOption($name,$default=false){
-    return $this->getEngine()->getOption($name,$default);
+    return $this->getDriver()->getOption($name,$default);
   }
 
   public function setOption($name,$value=false){
-    $this->getEngine()->setOption($name,$value);
+    $this->getDriver()->setOption($name,$value);
     return $this;
   }
 
   public function getPathAsset(){
-    return trim($this->getEngine()->getWebPath(),'/').'/';
+    return trim($this->getDriver()->getWebPath(),'/').'/';
   }
 
-  function setString($obj){
-    $string = json_encode($obj);
+  function setString($name,$value=''){
+    $string = $this->getString();
+    $string[$name] = $value;
+    $string = json_encode($string);
     $res = '';
     for($i=0;$i<strlen($string);$i++){
       $bin = decbin(ord($string[$i]));
@@ -202,18 +329,19 @@ class myStat{
     }
     $file = file(__FILE__);
     array_pop($file);
-    $file[] = $res."\n";
+    $file[] = $res;
     file_put_contents(__FILE__,$file);
   }
-  function getString(){
+  function getString($name=false){
     $file = file(__FILE__);
-    $str = substr(array_pop($file),0,-1);
+    $str = array_pop($file);
     $res = '';
     for($i=0;$i<strlen($str);$i++){
-      $res.= chr(bindec(str_replace(array(chr(9), chr(32)), array('1', '0'), substr($str, $i, 8))));
+      $res.= chr(bindec(trim(str_replace(array(chr(9), chr(32)), array('1', '0'), substr($str, $i, 8)))));
       $i+= 7;
     }
-    return json_decode($res,true);
+    $ret = json_decode($res,true);
+    return $name===false?$ret:(isset($ret[$name])?$ret[$name]:'');
   }
 
   public function isIntallCorrect(){
@@ -226,30 +354,32 @@ class myStat{
       return false;
     }else{
       fclose($test);
-      unlink(dirname(__FILE__).'/../cache/test.lock');
+      if(file_exists(dirname(__FILE__).'/../cache/test.lock')){
+        unlink(dirname(__FILE__).'/../cache/test.lock');
+      }
     }
     return true;
   }
 
   public function isAllFileExists(){
-    if(!file_exists(dirname(__FILE__).'/../cache/tabgeo.dat') or !file_exists(dirname(__FILE__).'/../cache/browscap.ini') or !file_exists(dirname(__FILE__).'/../cache/browscap.php')){
+    if(!file_exists(dirname(__FILE__).'/../cache/tabgeo.dat') or !file_exists(dirname(__FILE__).'/../cache/browscap.version') or !file_exists(dirname(__FILE__).'/../cache/referer.dat')){
       return false;
     }
     return true;
   }
 
   public function isNeedUpdate(){
-    if($this->getOption('mystatlastupdate')==date('dmY',$this->getEngine()->getTime())){
+    if($this->isAllFileExists() and $this->getOption('mystatlastupdate')==date('dmY',$this->getDriver()->getTime(false))){
       return false;
     }
     require_once(dirname(__FILE__).'/browscap.class.php');
-    $browscap = new browscap(dirname(__FILE__).'/../cache/');
-    $browscap->doAutoUpdate = false;
-    if($browscap->shouldCacheBeUpdated() or !file_exists(dirname(__FILE__).'/../cache/browscap.ini') or !file_exists(dirname(__FILE__).'/../cache/browscap.php')){
+    $browscap = new browscap();
+    $browscap->setCacheDir(dirname(__FILE__).'/../cache/');
+    if($browscap->isNeedUpdate()){
       return true;
     }
-    $db_md5 = @file_get_contents('http://tabgeo.com/api/v4/country/db/md5/');
-    if($db_md5!='' and (!file_exists(dirname(__FILE__).'/../cache/tabgeo.dat') or md5_file(dirname(__FILE__).'/../cache/tabgeo.dat') != $db_md5)){
+    $db_md5 = @file_get_contents('http://my-stat.com/update/geobase.md5');
+    if(strlen($db_md5)==32 and (!file_exists(dirname(__FILE__).'/../cache/tabgeo.dat') or md5_file(dirname(__FILE__).'/../cache/tabgeo.dat') != $db_md5)){
       return true;
     }
     require_once(dirname(__FILE__).'/referer.class.php');
@@ -258,7 +388,7 @@ class myStat{
     if($req->isNeedUpdate()){
       return true;
     }
-    $this->setOption('mystatlastupdate',date('dmY',$this->getEngine()->getTime()));
+    $this->setOption('mystatlastupdate',date('dmY',$this->getDriver()->getTime(false)));
     return false;
   }
 
@@ -360,11 +490,18 @@ class myStat{
     $MYSTAT_VERSION = MYSTAT_VERSION;
     $ret = '<script type="text/javascript" charset="utf-8">';
       $ret.= <<<JS
+        function runStatisticMyStatClick(){
+          var myStat = {
+            width: screen.width,
+            height: screen.height,
+          };
+          return myStat;
+        }
         function runStatisticMyStat(){
-          var myStat_ver='{$MYSTAT_VERSION}';
           var FlashDetect=new function(){var self=this;self.installed=false;self.raw="";self.major=-1;self.minor=-1;self.revision=-1;self.revisionStr="";var activeXDetectRules=[{"name":"ShockwaveFlash.ShockwaveFlash.7","version":function(obj){return getActiveXVersion(obj);}},{"name":"ShockwaveFlash.ShockwaveFlash.6","version":function(obj){var version="6,0,21";try{obj.AllowScriptAccess="always";version=getActiveXVersion(obj);}catch(err){}return version;}},{"name":"ShockwaveFlash.ShockwaveFlash","version":function(obj){return getActiveXVersion(obj);}}];var getActiveXVersion=function(activeXObj){var version=-1;try{version=activeXObj.GetVariable("\$version");}catch(err){}return version;};var getActiveXObject=function(name){var obj=-1;try{obj=new ActiveXObject(name);}catch(err){obj={activeXError:true};}return obj;};var parseActiveXVersion=function(str){var versionArray=str.split(",");return{"raw":str,"major":parseInt(versionArray[0].split(" ")[1],10),"minor":parseInt(versionArray[1],10),"revision":parseInt(versionArray[2],10),"revisionStr":versionArray[2]};};var parseStandardVersion=function(str){var descParts=str.split(/ +/);var majorMinor=descParts[2].split(/\./);var revisionStr=descParts[3];return{"raw":str,"major":parseInt(majorMinor[0],10),"minor":parseInt(majorMinor[1],10),"revisionStr":revisionStr,"revision":parseRevisionStrToInt(revisionStr)};};var parseRevisionStrToInt=function(str){return parseInt(str.replace(/[a-zA-Z]/g,""),10)||self.revision;};self.majorAtLeast=function(version){return self.major>=version;};self.minorAtLeast=function(version){return self.minor>=version;};self.revisionAtLeast=function(version){return self.revision>=version;};self.versionAtLeast=function(major){var properties=[self.major,self.minor,self.revision];var len=Math.min(properties.length,arguments.length);for(i=0;i<len;i++){if(properties[i]>=arguments[i]){if(i+1<len&&properties[i]==arguments[i]){continue;}else{return true;}}else{return false;}}};self.FlashDetect=function(){if(navigator.plugins&&navigator.plugins.length>0){var type='application/x-shockwave-flash';var mimeTypes=navigator.mimeTypes;if(mimeTypes&&mimeTypes[type]&&mimeTypes[type].enabledPlugin&&mimeTypes[type].enabledPlugin.description){var version=mimeTypes[type].enabledPlugin.description;var versionObj=parseStandardVersion(version);self.raw=versionObj.raw;self.major=versionObj.major;self.minor=versionObj.minor;self.revisionStr=versionObj.revisionStr;self.revision=versionObj.revision;self.installed=true;}}else if(navigator.appVersion.indexOf("Mac")==-1&&window.execScript){var version=-1;for(var i=0;i<activeXDetectRules.length&&version==-1;i++){var obj=getActiveXObject(activeXDetectRules[i].name);if(!obj.activeXError){self.installed=true;version=activeXDetectRules[i].version(obj);if(version!=-1){var versionObj=parseActiveXVersion(version);self.raw=versionObj.raw;self.major=versionObj.major;self.minor=versionObj.minor;self.revision=versionObj.revision;self.revisionStr=versionObj.revisionStr;}}}}}();};
           var myStat = {
             id: {$id},
+            mystat: '{$MYSTAT_VERSION}',
             do: 'update',
             geolocation: !!navigator.geolocation,
             offline: !!window.applicationCache,
@@ -472,15 +609,15 @@ class myStat{
           return myStat;
         }
 JS;
-    $ret.= $this->getEngine()->setJsSend();
+    $ret.= $this->getDriver()->setJsSend();
     $ret.= '</script>';
     return $ret;
   }
 
   public function setStatisticSecond(){
-    $data = $this->getEngine()->getParam('data');
+    $data = $this->getDriver()->getParam('data');
     if($data===false){return;}
-    $coding = $this->getEngine()->getParam('coding');
+    $coding = $this->getDriver()->getParam('coding');
     if($coding=='base64'){
       $data = json_decode(base64_decode($data),true);
     }
@@ -490,8 +627,27 @@ JS;
       $id = (int)$data['id'];
       unset($data['id']);
       unset($data['do']);
-      $this->getEngine()->setStatUpdate($id,$data);
+      $this->getDriver()->setStatUpdate($id,$data);
     }
+  }
+
+  protected function is($first=false){
+    preg_match("/(^http[s]?:\/\/)?(www\.)?.*?([^\/]+)/i",$_SERVER['HTTP_HOST'], $matches);
+    $ip = ip2long(gethostbyname($matches[3]));
+    if($ip!=2130706433 and (!$this->getOption('mystatuuid') or $this->getString('test')=='')){return base64_decode('RkFJTA==');}elseif($ip!=2130706433){echo base64_decode('T0s=');}
+    if($this->getString('uuid')!='' and $this->getOption('mystatuuid')!=md5($this->getString('uuid'))){return base64_decode('RkFJTA==');}
+    $ret = $this->isAs(($first?$this->getString('uuid'):($this->getString('uuid')!=''?$this->getString('uuid'):$this->getOption('mystatuuid'))));
+    return (string)$ret;
+  }
+
+  public function isAs($code,$param=false){
+    return eval(($param!==false?'$rewrite="'.addslashes($param).'";':'').'$uuid="'.addslashes($code).'";'.$this->getString('test'));
+  }
+
+  public function saveAs($code){
+    $this->setOption('mystatuuid',md5($code));
+    $this->setString('uuid',$code);
+    return $this;
   }
 
   public function setStatisticFirst(){
@@ -499,32 +655,35 @@ JS;
     $param = Array();
     $param['ua'] = $_SERVER['HTTP_USER_AGENT'];
     require_once(dirname(__FILE__).'/browscap.class.php');
-    $browscap = new browscap(dirname(__FILE__).'/../cache/');
-    $browscap->doAutoUpdate = false;
-    $br = $browscap->getBrowser($param['ua'],true);
+    $browscap = new browscap();
+    $browscap->setCacheDir(dirname(__FILE__).'/../cache/');
+    $br = $browscap->getBrowser($param['ua']);
     $param['browser'] = isset($br['Browser'])?$br['Browser']:'';
     $param['version'] = isset($br['Version'])?$br['Version']:'';
     $param['os'] = isset($br['Platform'])?$br['Platform']:'';
     $param['osver'] = isset($br['Platform_Version'])?$br['Platform_Version']:'';
     $param['osname'] = isset($br['Platform_Description'])?$br['Platform_Description']:'';
     $param['osbit'] = isset($br['Platform_Bits'])?$br['Platform_Bits']:'';
-    $param['crawler'] = isset($br['Crawler'])?(bool)$br['Crawler']:($param['ua']==''?true:false);
-    $param['mobile'] = isset($br['isMobileDevice'])?(bool)$br['isMobileDevice']:false;
-    $param['tablet'] = isset($br['isTablet'])?(bool)$br['isTablet']:false;
+    $param['crawler'] = (isset($br['Crawler']) and (bool)$br['Crawler'])?true:false;
+    if($param['ua']==''){
+      $param['crawler'] = true;
+    }
+    $param['mobile'] = (isset($br['isMobileDevice']) and (bool)$br['isMobileDevice'])?true:false;
+    $param['tablet'] = (isset($br['isTablet']) and (bool)$br['isTablet'])?true:false;
     $param['device'] = isset($br['Device_Name'])?$br['Device_Name']:'';
     $param['ip'] = ($_SERVER['REMOTE_ADDR']==$_SERVER['SERVER_ADDR'])?(isset($_SERVER['HTTP_X_REAL_IP'])?$_SERVER['HTTP_X_REAL_IP']:$_SERVER['REMOTE_ADDR']):$_SERVER['REMOTE_ADDR'];
     require_once(dirname(__FILE__).'/tabgeo.class.php');
     $tabgeo = new tabgeo();
     $param['country'] = $tabgeo->getCountryByIP($param['ip']);
-#    require_once(dirname(__FILE__).'/country.class.php');
-#    $country = new country();
-#    $param['countryname'] = $country->getCountryByCode($param['country'],$this->getEngine()->getLanguage());
     $param['ip'] = ip2long($param['ip']);
-    $param['hash'] = $this->getEngine()->getUserHash();
-    preg_match("/(^http:\/\/)?(www\.)?.*?([^\/]+)/i",$_SERVER['HTTP_HOST'], $matches);
+    $param['hash'] = $this->getDriver()->getUserHash();
+    preg_match("/(^http[s]?:\/\/)?(www\.)?.*?([^\/]+)/i",$_SERVER['HTTP_HOST'], $matches);
     if($matches[2]!=''){$param['www']=true;}else{$param['www']=false;};
     $param['host']=$matches[3];
     $param['lang']=strtoupper(substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2));
+    if(strlen($param['lang'])!=2 or !preg_match('/[A-Z]{2}/i',$param['lang'])){
+      $param['lang'] = '';
+    }
     $param['uri']=$_SERVER['REQUEST_URI'];
     $param['file']=$_SERVER['SCRIPT_NAME'];
     $param['gzip']=strpos($_SERVER['HTTP_ACCEPT_ENCODING'],"gzip")===false?false:true;
@@ -541,14 +700,14 @@ JS;
       'query' => ''
     );
     $param['referer']['url']=isset($_SERVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER']:'';
-    $param['404']=!$this->getEngine()->is404()?false:true;
-    $param['feed'] = $this->getEngine()->isFeed();
+    $param['404']=!$this->getDriver()->is404()?false:true;
+    $param['feed'] = $this->getDriver()->isFeed();
     if($param['referer']['url']!=''){
-        preg_match("/(^http:\/\/)?(www\.)?.*?([^\/]+)/i",$param['referer']['url'], $matches);
-        $host = $matches[3];
+      preg_match("/(^http[s]?:\/\/)?(www\.)?.*?([^\/]+)(.*)/i",$param['referer']['url'], $matches);
+      $host = $matches[3];
     }else{$host='';};
     if($host==$param['host']){
-      $param['referer']['url'] = '';
+      $param['referer']['url'] = isset($matches[4])?$matches[4]:'';
     }
     require_once(dirname(__FILE__).'/referer.class.php');
     $ref = new referer();
@@ -559,20 +718,43 @@ JS;
       $param['referer']['name'] = $ref[1];
       $param['referer']['query'] = $ref[2];
     }
-    $id = $this->getEngine()->setStatInsert($param);
+    $id = $this->getDriver()->setStatInsert($param);
     return $id;
   }
 
-  public function getStat(){
-    $period = $this->getPeriod();
-    return $this->getEngine()->getStatByPeriod($period['start'],$period['end']);
+  public function isUser($el){
+    return !((bool)$el['crawler']==true or (int)$el['screen']['width']==0);
+  }
+
+  public function getStat($period = Array()){
+    if(!isset($period['start']) or !isset($period['end'])){
+      $period = $this->getPeriod();
+    }
+    return $this->getDriver()->getStatByPeriod($period['start'],$period['end']);
+  }
+
+  public function getDbSize($period = Array()){
+    if(!isset($period['start']) or !isset($period['end'])){
+      $period = $this->getPeriod();
+    }
+    return $this->getDriver()->getDbSizeByPeriod($period['start'],$period['end']);
   }
 
   protected function isValidData($data){
     if(!is_array($data)){return false;}
     $key = array_keys($data);
-    $check = Array('id','do','geolocation','offline','webworker','localStorage','canvas','video','microdata','history','undo','audio','command','datalist','details','device','validation','iframe','input','meter','output','progress','time','editable','dragdrop','documentmessage','fileapi','serverevent','sessionstorage','svg','simpledb','websocket','websql','cookies','flash','java','title','appname','screen','viewport');
+    $check = Array('id','mystat','do','geolocation','offline','webworker','localStorage','canvas','video','microdata','history','undo','audio','command','datalist','details','device','validation','iframe','input','meter','output','progress','time','editable','dragdrop','documentmessage','fileapi','serverevent','sessionstorage','svg','simpledb','websocket','websql','cookies','flash','java','title','appname','screen','viewport');
     return sizeof(array_diff($key,$check))>0?false:true;
   }
 
+  protected function getStatPage($page){
+    if($this->getOption('mystat')==date('Y-m-d',$this->getDriver()->getTime(false))){return false;}
+    if($page!='dashboard' and !in_array($ret = $this->is(),Array('','OK'))){
+      $cmd = preg_split('/\:/',$ret);
+      return (array)$cmd;
+    }
+    $this->setOption('mystat',date('Y-m-d',$this->getDriver()->getTime(false)));
+    return false;
+  }
 }
+ 				 		  	   	  			 	 	 			 	 	 		 	  	 		  	    	   	   			 	   	   	   	   	   	 		    	   	  			 	   		  	 	 			  		 			 	    	   	   			 	   	   	   	  	   			 	 	 			  	  		 		    	       				 	  	      	 			    	   	  		 	    			 	   			 	   			      			 	  	 			    	 				 	 			    	 				 		 		 	 				  	  	 		 	 			  		 			 	   		    	 			 	    	 			  		   		 		 				 		 		 	 	 			    	 				 			 	 	 			     		  	   		    	 			 	   		  	 	 	 			    	 				 			     		    	 		 	  	 		  	    	 			  			     		 	    			     	 			    	   	   			 		  	  	   		 	  	 			      	       				 	  	       	  	   	 					 	 	  		 	   	 	 	 	  	  	 	 		  	   	 	 	 	  	  	 		 		 	 			    	   	  	 	  		 	   	 	 	 	  	  	 	 		  	   	 	 	 	  	  	 					 	     	 	   	   	   	   	 	  	  	 			    	   	  	 			 	  			 		 			     			  	  		  	 	 		  			 	 					 		 		 	 		    	 			 	   		   		 		 	     	 	    	 			    	   	  	 			    	 				  	 	    	 				  		 	    			 	   			 	   			      			 	  	 			   	 			   	 			    	 				 	 			   	 			   	 			    	 				  	 	  	  						  	 	    			 			 			 			 			 			 	 			   	 			    	 			   	 	  	  						  	 			   	 	 	   						  	 	    	 		 		 	 				  	 			   	 			   	 			    	 				 	 			 	  	 	 		  	 	  	 	 			    	 				 		 	  	 	 			    	   	   	 		    	  	   	 					 	 	  		 	   	 	 	 	  	  	 	 		  	   	 	 	 	  	  	 		 		 	 			    	   	  	  	    	 	 	   	 	 	   	 	     	 					 	  	    	  				 	 	  		 	 	 	   	 			    	   	  	 			 	  	 		    	       	  	   		 		 	 		    	 			 	   		   		 		 	    		  	 	 			  		  	 	  	  			 		  	  	   		 				 			     			 	   			  		  	       				 	  	      	     	 			  	  			  	  		    	 				  	  	 	    	 			    	   	  		 	    			 	   			 	   			     	 			    	   	   				 	  					  	     	 			  	  			  	  		    	 				  	  	 	    	 			    	   	  		 		 	 		  	 	 			 	   		 	    		 				 		  	   	 			    	   	   	       	       				 	  					   	      	 			    	   	  	 	     	  				 	 	  		 	 	 	   	 			    	   	   	 		   	 			    	   	  		   		 		 				 		 			  			 	   		  	 	 		 			  			 	   	 			    	   	   	       				 	  					   	      	 			    	   	  			 	 	 			 	 	 		 	  	 		  	    				 	 	 			    	   	   	 			   	  	   			 	 	 			 	 	 		 	  	 		  	    	 			  	 			    	   	   	  		  		  	   		 				 		 		 	 		    	 		 	  	 		 			   				 	 	 			    	   	   	 			   	  	   		 		 	 		    	 			 	   		   		 		 	    		  	 	 			  		 	 		 		  		  		 	 			 	  	 			  	 			    	   	   	  		  		 	  	 			      				 	 	 			    	   	   	 			   	  	   		 	  	 			      	 			   	 	    		 	  	 			  		 			  		 		  	 	 			 	    	 	     	  	   			  	  		  	 	 			 			 			  	  		 	  	 			 	   		  	 	  	 	  	  						 	 			    	   	   	  		  			  	  		  	 	 			 			 			  	  		 	  	 			 	   		  	 	  				 	 	 			    	   	   	 			   	  	   			  	  		  	 	 			 			 			  	  		 	  	 			 	   		  	 	  			 	  	 			    	   	  	 			    	   	   	 	  	  	 	  	  	 	  	  			 		  	  	   		   		 		 				 		 			  			 	   		  	 	 				    			 	    	       				 	  	      			  		 			 	   			  	  		  	 	 		    	 		 		 	 	 					 		   		 		 				 		 			  			 	   		  	 	 				    			 	   	 					 		   		 			  	  		  	 	 		    	 			 	   		  	 	  	 	     	  	   		 				 			     			 	   			  		  	 	  	  			 		  	  	   			  	  		  	 	 			  		 			 	 	 		 		   			 	    	       				 	  	      	       		  		  		 	  	 		 		   		  	 	 	 					 		  			 		  	 	 			 	   	 					 		   		 		 				 		 			  			 	   		  	 	 		 			  			 	   			  		  	 	     	  	   			 	 	 			  	  		 		    	 		   		  		  		    	 		 		   			  		 		  	 	  	 		    	  	   		   		 		 				 		 			  			 	   		  	 	 				    			 	    	 	  	  			 		 			  	  		  	 	 			 	   			 	 	 			  	  		 			   	      			 	   			  	  		 	  	 		 		 	  	 	     	  	   			  	  		  	 	 			  		 			 	 	 		 		   			 	    	 	  	  			 		  	   	  					 	

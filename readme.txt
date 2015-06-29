@@ -1,18 +1,21 @@
 === mySTAT ===
 Contributors: KILLER
-Donate link: http://sandbox.net.ua/mystat/
-Tags: stat, statistic, graph, statpress, visitor, host, best, statistics, mystat, stats, visitors, geo, user, users, plugins, plugin, widget, Post, admin, posts, comments, page, rss
-Requires at least: 4.0
-Tested up to: 4.1.1
-Stable tag: 2.6
+Donate link: http://my-stat.com/
+Tags: analytics, stat, statistic, graph, statpress, visitor, host, best, statistics, mystat, stats, visitors, geo, user, users, plugins, plugin, widget, Post, admin, posts, comments, page, rss
+Requires at least: 4.1
+Tested up to: 4.2.2
+Stable tag: 3.0
 
-myStat is a flexible and versatile system intended for accumulation and analysis of the site attendance statistics.
+mySTAT is a flexible and versatile system intended for accumulation and analysis of the site attendance statistics.
 
 == Description ==
 
- myStat suits to upcoming projects perfectly. There are more than 50 reports available in the system. The system is easy to install and to set up; it allows counting all the visitors of your web-site - both humans and robots. All visits data is stored at your server, which meets safety and confidentiality requirements.
+ mySTAT suits to upcoming projects perfectly. There are more than 50 reports available in the system. The system is easy to install and to set up; it allows counting all the visitors of your web-site - both humans and robots. All visits data is stored at your server, which meets safety and confidentiality requirements.
 
 == History ==
+
+ = version 3.0 =
+ * [+]  The new version of the plugin. The new architecture. We start all over again.
 
  = version 2.6 =
  * [+]  Danish language (tnx GeorgWP)
@@ -148,14 +151,6 @@ myStat is a flexible and versatile system intended for accumulation and analysis
 1. Screenshot Admin Area 1
 1. Screenshot Admin Area 2
 1. Screenshot Admin Area 3
-
-== Frequently Asked Questions ==
-
-
-
- = Could you please define what each category mean: pageviews, hosts, users =
-
- *   Pageviews - number of web-pages downloading;
- *   Hosts - number of unique IP-addresses requesting for the web-pages;
- *   Users - number of the web-site visitors having executed java-script and downloaded the counter image.
+1. Screenshot Admin Area 4
+1. Screenshot Admin Area 5
 
