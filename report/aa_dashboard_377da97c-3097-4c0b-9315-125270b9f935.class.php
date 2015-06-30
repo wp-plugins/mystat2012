@@ -51,7 +51,7 @@ class dashboard{
             }else{
               $mobile['desktop']++;
             }
-            if($d['referer']['url']==''){
+            if($d['referer']['url']=='' or !preg_match('/^http(s)?\:\/\/(.*)/i',$d['referer']['url'])){
               $referer['direct']++;
             }elseif($d['referer']['type']=='search'){
               $referer['search']++;
@@ -118,7 +118,7 @@ class dashboard{
             }else{
               $mobile['desktop']++;
             }
-            if($d['referer']['url']=='' and !preg_match('/^http(s)?\:\/\/(.*)/i',$d['referer']['url'])){
+            if($d['referer']['url']=='' or !preg_match('/^http(s)?\:\/\/(.*)/i',$d['referer']['url'])){
               $referer['direct']++;
             }elseif($d['referer']['type']=='search'){
               $referer['search']++;
