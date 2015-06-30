@@ -608,6 +608,8 @@ JS;
   }
 
   public function addWPStatPost(){
+    global $typenow;
+    if($typenow!='post'){return;}
     $posts = get_posts(array('posts_per_page'=>5000));
     $arr = $arr30 = Array();
     for($i=29;$i>=0;$i--){

@@ -155,4 +155,5 @@ mySTAT is a flexible and versatile system intended for accumulation and analysis
 1. Screenshot Admin Area 3
 1. Screenshot Admin Area 4
 1. Screenshot Admin Area 5
+1. Screenshot Admin Area 6
 
