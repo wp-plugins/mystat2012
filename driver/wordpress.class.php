@@ -388,6 +388,7 @@ JS;
       'refname varchar(50),'."\n".
       'refquery text,'."\n".
       'country char(2),'."\n".
+      'city char(150),'."\n".
       'screen varchar(12),'."\n".
       'depth smallint,'."\n".
       'gzip bool,'."\n".
