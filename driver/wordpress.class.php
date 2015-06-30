@@ -186,6 +186,7 @@ JS;
           'browser' => $param['browser'],
           'browser_version' => $param['version'],
           'device' => $param['device'],
+          'device_name' => $param['device_name'],
           'time_load' => 0,
           'ip' => $param['ip'],
           'proxy' => $param['proxy'],
