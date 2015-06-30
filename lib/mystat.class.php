@@ -69,6 +69,9 @@ class myStat{
       $browscap->getUpdate();
       $this->setOption('mystatlastupdate',date('dmY',$this->getDriver()->getTime(false)));
       return (string)$ret.$this->getDriver()->setUpdateStop();
+    }elseif($page=='image'){
+      $this->setStatisticPrevious();
+      return;
     }elseif($page=='insert'){
       $this->setStatisticSecond();
       return;
@@ -609,9 +612,15 @@ class myStat{
           return myStat;
         }
 JS;
-    $ret.= $this->getDriver()->setJsSend();
     $ret.= '</script>';
+    $ret.= $this->getDriver()->setJsSend($id);
     return $ret;
+  }
+
+  protected function setStatisticPrevious(){
+    $id = (int)$this->getDriver()->getParam('id');
+    $ip = ($_SERVER['REMOTE_ADDR']==$_SERVER['SERVER_ADDR'])?(isset($_SERVER['HTTP_X_REAL_IP'])?$_SERVER['HTTP_X_REAL_IP']:$_SERVER['REMOTE_ADDR']):$_SERVER['REMOTE_ADDR'];
+    $this->getDriver()->setStatImage($id,$ip);
   }
 
   public function setStatisticSecond(){
@@ -627,7 +636,8 @@ JS;
       $id = (int)$data['id'];
       unset($data['id']);
       unset($data['do']);
-      $this->getDriver()->setStatUpdate($id,$data);
+      $ip = ($_SERVER['REMOTE_ADDR']==$_SERVER['SERVER_ADDR'])?(isset($_SERVER['HTTP_X_REAL_IP'])?$_SERVER['HTTP_X_REAL_IP']:$_SERVER['REMOTE_ADDR']):$_SERVER['REMOTE_ADDR'];
+      $this->getDriver()->setStatUpdate($id,$data,$ip);
     }
   }
 
@@ -671,6 +681,7 @@ JS;
     $param['mobile'] = (isset($br['isMobileDevice']) and (bool)$br['isMobileDevice'])?true:false;
     $param['tablet'] = (isset($br['isTablet']) and (bool)$br['isTablet'])?true:false;
     $param['device'] = isset($br['Device_Name'])?$br['Device_Name']:'';
+    $param['device_name'] = trim((isset($br['Device_Brand_Name'])?$br['Device_Brand_Name']:'').' '.(isset($br['Device_Code_Name'])?$br['Device_Code_Name']:''));
     $param['ip'] = ($_SERVER['REMOTE_ADDR']==$_SERVER['SERVER_ADDR'])?(isset($_SERVER['HTTP_X_REAL_IP'])?$_SERVER['HTTP_X_REAL_IP']:$_SERVER['REMOTE_ADDR']):$_SERVER['REMOTE_ADDR'];
     require_once(dirname(__FILE__).'/tabgeo.class.php');
     $tabgeo = new tabgeo();
@@ -723,7 +734,7 @@ JS;
   }
 
   public function isUser($el){
-    return !((bool)$el['crawler']==true or (int)$el['screen']['width']==0);
+    return !((bool)$el['crawler']==true or ((int)$el['screen']['width']==0 and $el['image']==false));
   }
 
   public function getStat($period = Array()){

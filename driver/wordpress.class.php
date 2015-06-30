@@ -74,7 +74,7 @@ class wordpress{
   }
 
   public function getParam($name,$default=false){
-    return isset($_POST[$name])?$_POST[$name]:(($name=='report' and isset($_GET[$name]))?$_GET[$name]:$default);
+    return isset($_POST[$name])?$_POST[$name]:((($name=='report' or $name=='id') and isset($_GET[$name]))?$_GET[$name]:$default);
   }
 
   public function getOption($name,$default=false){
@@ -126,28 +126,24 @@ class wordpress{
     $this->php = Array($func,$el);
   }
 
-  public function setJsSend(){
+  public function setJsSend($id){
     $url = admin_url('admin-ajax.php');
     $ret =  <<<JS
+    <img src="{$url}?action=mystat&report=image&id={$id}" width="1px" height="1px" />
+    <script type="text/javascript" charset="utf-8">
       var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9\\+\\/\\=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/\\r\\n/g,"\\n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
-      jQuery(document).ready(function($) {
+      var ajax = {};ajax.x = function() {if (typeof XMLHttpRequest !== 'undefined') {return new XMLHttpRequest();  }var versions = ["MSXML2.XmlHttp.5.0",   "MSXML2.XmlHttp.4.0",  "MSXML2.XmlHttp.3.0",   "MSXML2.XmlHttp.2.0",  "Microsoft.XmlHttp"];var xhr;for(var i = 0; i < versions.length; i++) {  try {  xhr = new ActiveXObject(versions[i]);  break;  } catch (e) {}}return xhr;};ajax.send = function(url, callback, method, data, sync) {var x = ajax.x();x.open(method, url, sync);x.onreadystatechange = function() {if (x.readyState == 4) {callback(x.responseText)}};if (method == 'POST') {x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');}x.send(data)};ajax.get = function(url, data, callback, sync) {var query = [];for (var key in data) {query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));}ajax.send(url + '?' + query.join('&'), callback, 'GET', null, sync)};ajax.post = function(url, data, callback, sync) {var query = [];for (var key in data) {query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));}ajax.send(url, callback, 'POST', query.join('&'), sync)};
+  
+      var addListener = document.addEventListener || document.attachEvent,
+        removeListener =  document.removeEventListener || document.detachEvent
+        eventName = document.addEventListener ? "DOMContentLoaded" : "onreadystatechange"
+
+      addListener.call(document, eventName, function(){
         var stat = runStatisticMyStat();
-        $.ajax({
-          url: '{$url}',
-          data: {
-            action: 'mystat',
-            report: 'insert',
-            data: Base64.encode(JSON.stringify(stat)),
-            coding: 'base64'
-          },
-          dataType: 'json',
-          type: 'POST',
-          success: function(data, textStatus){
-          },
-          error: function(){
-          }
-        });
-      });
+        ajax.post('{$url}',{action: 'mystat',report: 'insert',data: Base64.encode(JSON.stringify(stat)),coding: 'base64'},function(){},false);
+        removeListener( eventName, arguments.callee, false )
+      }, false )
+    </script>
 JS;
     return $ret;
   }
@@ -230,7 +226,38 @@ JS;
     return $id;
   }
 
-  public function setStatUpdate($id,$param){
+  public function setStatImage($id,$ip){
+    global $wpdb;
+    if($id>0){
+      $rows=$wpdb->get_var(
+        $wpdb->prepare('
+          SELECT id FROM '.$wpdb->prefix.'mystatdata
+          WHERE
+            id=%d AND
+            ip=%d
+          ',
+          $id,
+          ip2long($ip)
+        )
+      );
+      if(sizeof($rows)>0){
+        $rows=$wpdb->get_var(
+          $wpdb->prepare('
+            UPDATE '.$wpdb->prefix.'mystatdata SET
+              image=%s
+            WHERE
+              id=%d
+            ',
+            true,
+            $id
+          )
+        );
+      }
+    }
+    echo base64_decode('R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAABAAEAAAICVAEAOw==');
+  }
+
+  public function setStatUpdate($id,$param,$ip){
     global $wpdb;
     if($id>0){
       $timer = microtime(true);
@@ -238,9 +265,11 @@ JS;
         $wpdb->prepare('
           SELECT updated_at,time_start FROM '.$wpdb->prefix.'mystatdata
           WHERE
-            id=%d
+            id=%d AND
+            ip=%d
           ',
-          $id
+          $id,
+          ip2long($ip)
         )
       );
       if(sizeof($rows)==0){return;}
@@ -275,6 +304,7 @@ JS;
         )
       );
     }
+    echo '{"success":true}';
   }
 
   public function getStatByPeriod($from,$to){
@@ -339,9 +369,11 @@ JS;
       'browser varchar(200),'."\n".
       'browser_version varchar(10),'."\n".
       'device varchar(200),'."\n".
+      'device_name varchar(200),'."\n".
       'time_start int(11) UNSIGNED,'."\n".
       'time_load float(9,4) UNSIGNED,'."\n".
       'ip bigint,'."\n".
+      'image bool,'."\n".
       'proxy bool,'."\n".
       'is404 bool,'."\n".
       'is_feed bool,'."\n".
@@ -574,7 +606,7 @@ JS;
   }
 
   public function addWPStatPost(){
-    $posts = get_posts();
+    $posts = get_posts(array('posts_per_page'=>5000));
     $arr = $arr30 = Array();
     for($i=29;$i>=0;$i--){
       $arr30[date('Y-m-d',strtotime(date('Y-m-d',$this->getTime(true)).' 00:00:00 -'.$i.'days'))] = 0;
@@ -816,9 +848,11 @@ class dbResult implements Iterator{
     $el['mobile'] = (bool)$this->row->mobile;
     $el['tablet'] = (bool)$this->row->tablet;
     $el['device'] = (string)$this->row->device;
+    $el['device_name'] = (string)$this->row->device_name;
     $el['ip'] = (float)$this->row->ip;
     $el['country'] = strtoupper((string)$this->row->country);
     $el['www'] = (bool)$this->row->www;
+    $el['image'] = (string)$this->row->image;
     $el['host'] = (string)$this->row->host;
     $el['lang'] = strtoupper((string)$this->row->lang);
     $el['uri'] = (string)$this->row->uri;
