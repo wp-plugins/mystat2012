@@ -145,6 +145,8 @@ mySTAT is a flexible and versatile system intended for accumulation and analysis
 
 1. Upload plugin to the `/wp-content/plugins/mystat/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Click "Update" in the upper-notification
+1. Wait while page automatic reload
 
 == Screenshots ==
 
@@ -153,4 +155,5 @@ mySTAT is a flexible and versatile system intended for accumulation and analysis
 1. Screenshot Admin Area 3
 1. Screenshot Admin Area 4
 1. Screenshot Admin Area 5
+1. Screenshot Admin Area 6
 
