@@ -61,7 +61,7 @@
                     <h4><xsl:value-of select="//REPORT/TRANSLATE/CODEFAIL"/></h4>
                   </xsl:otherwise>
                 </xsl:choose>
-                <a class="button button-primary" href="http://codecanyon.net/"><xsl:value-of select="//REPORT/TRANSLATE/BUYFULL"/></a>
+                <a class="button button-primary" target="_blank" href="http://my-stat.com/buy.php"><xsl:value-of select="//REPORT/TRANSLATE/BUYFULL"/></a>
                 <span class="ortag"><xsl:value-of select="//REPORT/TRANSLATE/OR"/></span>
                 <a class="button" onclick="jQuery('#uuidcontainer').show();return false;"><xsl:value-of select="//REPORT/TRANSLATE/ENTERCODE"/></a>
                 <div id="uuidcontainer" style="display:none;">
