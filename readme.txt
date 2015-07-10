@@ -3,7 +3,7 @@ Contributors: KILLER
 Donate link: http://my-stat.com/
 Tags: analytics, stat, statistic, graph, statpress, visitor, host, best, statistics, mystat, stats, visitors, geo, user, users, plugins, plugin, widget, Post, admin, posts, comments, page, rss
 Requires at least: 4.1
-Tested up to: 4.2.2
+Tested up to: 4.3
 Stable tag: 3.0
 
 mySTAT is a flexible and versatile system intended for accumulation and analysis of the site attendance statistics.
@@ -12,7 +12,7 @@ mySTAT is a flexible and versatile system intended for accumulation and analysis
 
  mySTAT suits to upcoming projects perfectly. There are more than 50 reports available in the system. The system is easy to install and to set up; it allows counting all the visitors of your web-site - both humans and robots. All visits data is stored at your server, which meets safety and confidentiality requirements.
 
-== History ==
+== Changelog ==
 
  = version 3.0 =
  * [+]  The new version of the plugin. The new architecture. We start all over again.

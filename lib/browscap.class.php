@@ -53,7 +53,7 @@ class browscap{
     if(!$this->isNeedUpdate()){return;}
     $gzip = $realfile = false;
     $url = 'http://my-stat.com/update/browscap_update.php?type=source';
-    if(function_exists('gzdecode')){
+    if(function_exists('gzfile')){
       $url = 'http://my-stat.com/update/browscap_update.php?type=gzip';
       $gzip = true;
     }
