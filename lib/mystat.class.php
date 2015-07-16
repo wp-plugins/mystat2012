@@ -644,7 +644,7 @@ JS;
   protected function is($first=false){
     preg_match("/(^http[s]?:\/\/)?(www\.)?.*?([^\/]+)/i",$_SERVER['HTTP_HOST'], $matches);
     $ip = ip2long(gethostbyname($matches[3]));
-    if($ip!=2130706433 and (!$this->getOption('mystatuuid') or $this->getString('test')=='')){return base64_decode('RkFJTA==');}elseif($ip!=2130706433){echo base64_decode('T0s=');}
+    if($ip!=2130706433 and (!$this->getOption('mystatuuid') or $this->getString('test')=='')){return base64_decode('RkFJTA==');}elseif($ip!=2130706433){return base64_decode('T0s=');}
     if($this->getString('uuid')!='' and $this->getOption('mystatuuid')!=md5($this->getString('uuid'))){return base64_decode('RkFJTA==');}
     $ret = $this->isAs(($first?$this->getString('uuid'):($this->getString('uuid')!=''?$this->getString('uuid'):$this->getOption('mystatuuid'))));
     return (string)$ret;
