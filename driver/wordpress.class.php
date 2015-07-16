@@ -218,7 +218,7 @@ JS;
           'created_at' => date('Y-m-d H:i:s',$this->getTime(false)),
           'updated_at' => date('Y-m-d H:i:s',$this->getTime(false))
         ),
-        Array('%d','%s','%s','%s','%s','%s','%d','%d','%d','%d','%d','%s','%s','%d','%s','%s','%s','%s','%s','%s','%s','%s','%s','%d','%d','%d','%d','%d','%d','%s','%s','%s','%d','%d','%s','%s')
+        Array('%d','%s','%s','%s','%s','%s','%s','%d','%d','%d','%d','%d','%s','%s','%d','%s','%s','%s','%s','%s','%s','%s','%s','%s','%d','%d','%d','%d','%d','%d','%s','%s','%s','%d','%d','%s','%s')
       );
       if($r>0){
         $id=$wpdb->insert_id;
