@@ -443,7 +443,6 @@ JS;
     $wpdb->query('DROP TABLE '.$wpdb->prefix.'mystatdata;');
     $wpdb->query('DROP TABLE '.$wpdb->prefix.'mystatclick;');
     $wpdb->query('DROP TABLE '.$wpdb->prefix.'mystatsize;');
-    $this->setOption('mystatuuid');
   }
 
   public function updatePlugin(){
