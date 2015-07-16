@@ -165,7 +165,7 @@ class myStat{
 
   public function getBrowserFlag($name){
     $name = strtolower(trim($name));
-    $name = str_replace(Array(' ','.','-'),'_',$name);
+    $name = str_replace(Array(' ','.','-','/'),'_',$name);
     $name = preg_replace('/_{2,}/','_',trim($name,'_'));
     if(!preg_match('/^[A-z0-9_]*$/',$name) or strlen($name)<1){
       return false;
