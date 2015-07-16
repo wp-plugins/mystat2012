@@ -453,7 +453,7 @@ JS;
   }
 
   public function addMenu(){
-    add_menu_page($this->__('My Statistics'),$this->__('My Statistics'),'update_plugins','statistics.html',Array($this,'setOpenPage'),'dashicons-chart-bar',4);
+    add_menu_page($this->__('My Statistics'),$this->__('My Statistics'),$this->getOption('mystataccess','update_plugins'),'statistics.html',Array($this,'setOpenPage'),'dashicons-chart-bar',4);
   }
 
   public function setOpenPage($ajax = false){
