@@ -34,6 +34,7 @@
       .wrap .widefat td{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
       .wrap .screen{border:2px solid #aaa;background-color:#ccc;}
       .date-picker-wrapper .drp_top-bar .apply-btn{background: #2EA2CC;border-color: #0074A2;-webkit-box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.5),0 1px 0 rgba(0, 0, 0, 0.15);box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.5),0 1px 0 rgba(0, 0, 0, 0.15);color: #FFF;text-decoration: none;}
+      @media only screen and (min-width:1500px){#wpbody-content #dashboard-widgets .postbox-container{width:49.5% !important;}
     </style>
     <div class="wrap">
       <div id="logo" onclick="logoSVG.setAnimation(true);"></div>
